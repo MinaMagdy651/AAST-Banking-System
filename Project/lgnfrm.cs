@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Project
 {
@@ -29,8 +30,24 @@ namespace Project
 
         private void btn_lgin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Testing push COMMAND");
-            MessageBox.Show("new");
+            //MessageBox.Show("Testing push COMMAND");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\mina aast\Term 5\Advanced programming\Project\Project\DataBase\DB.mdf';Integrated Security=True");
+            try
+            {
+                con.Open();
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("There is an error while establishing a connection with the SqlServer");
+                Console.ReadKey();
+            }
+            string query = "select * from Users where AccountNumber = " + 1;
+            SqlCommand command = new SqlCommand(query, con);
+            SqlDataReader dataReader = command.ExecuteReader();
+            if (dataReader.Read())
+            {
+                MessageBox.Show((string)dataReader.GetValue(1));
+            }
         }
     }
 }

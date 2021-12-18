@@ -1,3 +1,5 @@
+using System;
+using System.Data.SqlClient;
 namespace Project
 {
     internal static class Program
