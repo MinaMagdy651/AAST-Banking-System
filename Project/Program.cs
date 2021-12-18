@@ -11,7 +11,7 @@ namespace Project
         static void Main()
         {
             ApplicationConfiguration.Initialize();
-            Application.Run(new lgnfrm());
+            Application.Run(new Form1());
         }
     }
 }
