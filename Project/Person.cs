@@ -36,12 +36,10 @@ namespace Project
         public UInt32 Account_Number
         {
             get { return account_number;}
-            set { account_number = value; }
         }
         public string Password
         {
             get { return password;}
-            set { password = value; }
         }
         public int AdminLvl
         {
