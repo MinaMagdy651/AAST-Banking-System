@@ -39,17 +39,17 @@
             // lbl_username
             // 
             this.lbl_username.AutoSize = true;
-            this.lbl_username.Location = new System.Drawing.Point(81, 25);
+            this.lbl_username.Location = new System.Drawing.Point(39, 22);
             this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(60, 15);
+            this.lbl_username.Size = new System.Drawing.Size(99, 15);
             this.lbl_username.TabIndex = 0;
-            this.lbl_username.Text = "Username";
+            this.lbl_username.Text = "Account Number";
             this.lbl_username.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_password
             // 
             this.lbl_password.AutoSize = true;
-            this.lbl_password.Location = new System.Drawing.Point(81, 78);
+            this.lbl_password.Location = new System.Drawing.Point(39, 78);
             this.lbl_password.Name = "lbl_password";
             this.lbl_password.Size = new System.Drawing.Size(57, 15);
             this.lbl_password.TabIndex = 1;
@@ -57,23 +57,23 @@
             // 
             // usernametxt
             // 
-            this.usernametxt.Location = new System.Drawing.Point(155, 22);
+            this.usernametxt.Location = new System.Drawing.Point(144, 22);
             this.usernametxt.Name = "usernametxt";
             this.usernametxt.Size = new System.Drawing.Size(100, 23);
             this.usernametxt.TabIndex = 2;
             // 
             // passwordtxt
             // 
-            this.passwordtxt.Location = new System.Drawing.Point(155, 70);
+            this.passwordtxt.Location = new System.Drawing.Point(144, 75);
             this.passwordtxt.Name = "passwordtxt";
             this.passwordtxt.Size = new System.Drawing.Size(100, 23);
             this.passwordtxt.TabIndex = 3;
             // 
             // btn_lgin
             // 
-            this.btn_lgin.Location = new System.Drawing.Point(86, 125);
+            this.btn_lgin.Location = new System.Drawing.Point(39, 125);
             this.btn_lgin.Name = "btn_lgin";
-            this.btn_lgin.Size = new System.Drawing.Size(75, 23);
+            this.btn_lgin.Size = new System.Drawing.Size(99, 23);
             this.btn_lgin.TabIndex = 4;
             this.btn_lgin.Text = "Login";
             this.btn_lgin.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             // 
             // btn_exit
             // 
-            this.btn_exit.Location = new System.Drawing.Point(180, 125);
+            this.btn_exit.Location = new System.Drawing.Point(169, 125);
             this.btn_exit.Name = "btn_exit";
             this.btn_exit.Size = new System.Drawing.Size(75, 23);
             this.btn_exit.TabIndex = 5;

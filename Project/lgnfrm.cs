@@ -25,12 +25,16 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
+            
             this.Close();
         }
 
         private void btn_lgin_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Testing push COMMAND");
+
+            Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
+
+
             SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\mina aast\Term 5\Advanced programming\Project\Project\DataBase\DB.mdf';Integrated Security=True");
             try
             {
@@ -39,14 +43,22 @@ namespace Project
             catch (SqlException)
             {
                 Console.WriteLine("There is an error while establishing a connection with the SqlServer");
-                Console.ReadKey();
             }
-            string query = "select * from Users where AccountNumber = " + 1;
+
+            string query = "select * from Users where AccountNumber = " + p.Account_Number;
             SqlCommand command = new SqlCommand(query, con);
             SqlDataReader dataReader = command.ExecuteReader();
             if (dataReader.Read())
             {
-                MessageBox.Show((string)dataReader.GetValue(1));
+                if(p.Password != (string)dataReader.GetValue(1))
+                {
+                    MessageBox.Show("Wrong Password");
+                }
+                p.AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
+            }
+            else
+            {
+                MessageBox.Show("Account Number not found");
             }
         }
     }
