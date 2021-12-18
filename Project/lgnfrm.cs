@@ -33,33 +33,8 @@ namespace Project
         {
             //update 3
             Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
-
-
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\mina aast\Term 5\Advanced programming\Project\Project\DataBase\DB.mdf';Integrated Security=True");
-            try
-            {
-                con.Open();
-            }
-            catch (SqlException)
-            {
-                Console.WriteLine("There is an error while establishing a connection with the SqlServer");
-            }
-
-            string query = "select * from Users where AccountNumber = " + p.Account_Number;
-            SqlCommand command = new SqlCommand(query, con);
-            SqlDataReader dataReader = command.ExecuteReader();
-            if (dataReader.Read())
-            {
-                if(p.Password != (string)dataReader.GetValue(1))
-                {
-                    MessageBox.Show("Wrong Password");
-                }
-                p.AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
-            }
-            else
-            {
-                MessageBox.Show("Account Number not found");
-            }
+            p.loginCheck();
+    
         }
     }
 }
