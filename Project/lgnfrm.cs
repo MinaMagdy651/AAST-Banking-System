@@ -17,6 +17,12 @@ namespace Project
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             
@@ -34,6 +40,8 @@ namespace Project
                 Form1 frm = new Form1();
                 frm.Closed += (s, args) => this.Close();
                 frm.Show();
+
+              
             }
         }
     }
