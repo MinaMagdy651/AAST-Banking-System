@@ -29,7 +29,7 @@ namespace Project
 
         private void btn_lgin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Testing btn");
+            MessageBox.Show("Testing push");
         }
     }
 }
