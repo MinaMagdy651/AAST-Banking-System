@@ -29,7 +29,8 @@ namespace Project
 
         private void btn_lgin_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Testing push");
+            MessageBox.Show("Testing push COMMAND");
+            MessageBox.Show("new");
         }
     }
 }
