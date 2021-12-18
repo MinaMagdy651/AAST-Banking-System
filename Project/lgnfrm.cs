@@ -38,6 +38,7 @@ namespace Project
             {
                 this.Hide();
                 Form1 frm = new Form1();
+                frm.Closed += (s, args) => this.Close();
                 frm.Show();
             }
         }
