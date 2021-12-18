@@ -31,7 +31,7 @@ namespace Project
 
         private void btn_lgin_Click(object sender, EventArgs e)
         {
-
+            //update
             Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
 
 
