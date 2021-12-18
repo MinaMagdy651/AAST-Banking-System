@@ -31,7 +31,7 @@ namespace Project
         private void btn_lgin_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Testing push COMMAND");
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\mina aast\Term 5\Advanced programming\Project\Project\DataBase\DB.mdf';Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='K:\AAST\Terme 5\Advanced Programming\Project\Project 7\Project\DataBase\DB.mdf';Integrated Security=True");
             try
             {
                 con.Open();
