@@ -14,6 +14,7 @@ namespace Project
         private string password;
         private int adminLvl;
         private SqlConnection con;
+        public bool found = false;
 
 
         public Person(UInt32 number, string password)
@@ -35,6 +36,7 @@ namespace Project
         public UInt32 Account_Number
         {
             get { return account_number;}
+            set { account_number = value; }
         }
         public string Password
         {
@@ -51,13 +53,19 @@ namespace Project
             string query = "select * from Users where AccountNumber = " + Account_Number;
             SqlCommand command = new SqlCommand(query, con);
             SqlDataReader dataReader = command.ExecuteReader();
+
             if (dataReader.Read())
             {
                 if (Password != (string)dataReader.GetValue(1))
                 {
                     MessageBox.Show("Wrong Password");
                 }
-                AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
+                else
+                {
+                    AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
+                    found = true;
+                }
+                
             }
             else
             {

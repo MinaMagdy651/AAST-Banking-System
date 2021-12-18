@@ -34,7 +34,12 @@ namespace Project
             //update 3
             Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
             p.loginCheck();
-    
+            if (p.found)
+            {
+                this.Hide();
+                Form1 frm = new Form1();
+                frm.Show();
+            }
         }
     }
 }
