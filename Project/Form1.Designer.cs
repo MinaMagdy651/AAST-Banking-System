@@ -126,6 +126,7 @@
             this.DateLab.Size = new System.Drawing.Size(40, 15);
             this.DateLab.TabIndex = 8;
             this.DateLab.Text = "Date : ";
+            this.DateLab.Click += new System.EventHandler(this.DateLab_Click);
             // 
             // WithdrawStat
             // 

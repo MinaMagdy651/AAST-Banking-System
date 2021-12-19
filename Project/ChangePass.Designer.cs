@@ -40,7 +40,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 14);
+            this.label1.Location = new System.Drawing.Point(9, 43);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 15);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(10, 80);
+            this.label2.Location = new System.Drawing.Point(9, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 15);
             this.label2.TabIndex = 1;
@@ -68,7 +68,7 @@
             // 
             // TxtOldPass
             // 
-            this.TxtOldPass.Location = new System.Drawing.Point(156, 14);
+            this.TxtOldPass.Location = new System.Drawing.Point(155, 43);
             this.TxtOldPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtOldPass.Name = "TxtOldPass";
             this.TxtOldPass.Size = new System.Drawing.Size(110, 23);
@@ -76,7 +76,7 @@
             // 
             // TxtNewPass
             // 
-            this.TxtNewPass.Location = new System.Drawing.Point(156, 75);
+            this.TxtNewPass.Location = new System.Drawing.Point(155, 104);
             this.TxtNewPass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtNewPass.Name = "TxtNewPass";
             this.TxtNewPass.Size = new System.Drawing.Size(110, 23);
@@ -85,7 +85,7 @@
             // ChangePassStat
             // 
             this.ChangePassStat.AutoSize = true;
-            this.ChangePassStat.Location = new System.Drawing.Point(100, 127);
+            this.ChangePassStat.Location = new System.Drawing.Point(99, 156);
             this.ChangePassStat.Name = "ChangePassStat";
             this.ChangePassStat.Size = new System.Drawing.Size(72, 15);
             this.ChangePassStat.TabIndex = 5;
@@ -116,7 +116,8 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ChangePass";
+            this.Text = "Change Password";
+            this.Load += new System.EventHandler(this.ChangePass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -24,7 +24,7 @@ namespace Project
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            DateLab.Text = DateTime.Now.ToLongDateString();
         }
 
         private void BtnChangePass_Click(object sender, EventArgs e)
@@ -39,6 +39,11 @@ namespace Project
             lgnfrm newlgn = new lgnfrm();
             newlgn.Closed += (s, args) => this.Close();
             newlgn.Show();
+        }
+
+        private void DateLab_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -21,5 +21,10 @@ namespace Project
         {
             this.Close();
         }
+
+        private void ChangePass_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
