@@ -26,5 +26,19 @@ namespace Project
         {
 
         }
+
+        private void BtnChangePass_Click(object sender, EventArgs e)
+        {
+            ChangePass chng = new ChangePass();
+            chng.Show();
+        }
+
+        private void BtnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            lgnfrm newlgn = new lgnfrm();
+            newlgn.Closed += (s, args) => this.Close();
+            newlgn.Show();
+        }
     }
 }

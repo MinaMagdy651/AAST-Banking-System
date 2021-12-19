@@ -53,9 +53,9 @@
             // Message1Lab
             // 
             this.Message1Lab.AutoSize = true;
-            this.Message1Lab.Location = new System.Drawing.Point(28, 22);
+            this.Message1Lab.Location = new System.Drawing.Point(24, 16);
             this.Message1Lab.Name = "Message1Lab";
-            this.Message1Lab.Size = new System.Drawing.Size(52, 20);
+            this.Message1Lab.Size = new System.Drawing.Size(41, 15);
             this.Message1Lab.TabIndex = 0;
             this.Message1Lab.Text = "Hello, ";
             this.Message1Lab.Click += new System.EventHandler(this.label1_Click);
@@ -63,155 +63,162 @@
             // BalanceLab
             // 
             this.BalanceLab.AutoSize = true;
-            this.BalanceLab.Location = new System.Drawing.Point(28, 78);
+            this.BalanceLab.Location = new System.Drawing.Point(24, 58);
             this.BalanceLab.Name = "BalanceLab";
-            this.BalanceLab.Size = new System.Drawing.Size(72, 20);
+            this.BalanceLab.Size = new System.Drawing.Size(57, 15);
             this.BalanceLab.TabIndex = 1;
             this.BalanceLab.Text = "Balance : ";
             // 
             // UserBalanceLab
             // 
             this.UserBalanceLab.AutoSize = true;
-            this.UserBalanceLab.Location = new System.Drawing.Point(106, 78);
+            this.UserBalanceLab.Location = new System.Drawing.Point(93, 58);
             this.UserBalanceLab.Name = "UserBalanceLab";
-            this.UserBalanceLab.Size = new System.Drawing.Size(50, 20);
+            this.UserBalanceLab.Size = new System.Drawing.Size(38, 15);
             this.UserBalanceLab.TabIndex = 2;
             this.UserBalanceLab.Text = "label3";
             // 
             // BtnSignOut
             // 
             this.BtnSignOut.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnSignOut.Location = new System.Drawing.Point(710, 418);
+            this.BtnSignOut.Location = new System.Drawing.Point(621, 314);
+            this.BtnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSignOut.Name = "BtnSignOut";
-            this.BtnSignOut.Size = new System.Drawing.Size(100, 37);
+            this.BtnSignOut.Size = new System.Drawing.Size(88, 28);
             this.BtnSignOut.TabIndex = 3;
             this.BtnSignOut.Text = "Sign Out";
             this.BtnSignOut.UseVisualStyleBackColor = false;
+            this.BtnSignOut.Click += new System.EventHandler(this.BtnSignOut_Click);
             // 
             // UserNameLab
             // 
             this.UserNameLab.AutoSize = true;
             this.UserNameLab.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UserNameLab.Location = new System.Drawing.Point(109, 22);
+            this.UserNameLab.Location = new System.Drawing.Point(95, 16);
             this.UserNameLab.Name = "UserNameLab";
-            this.UserNameLab.Size = new System.Drawing.Size(50, 20);
+            this.UserNameLab.Size = new System.Drawing.Size(38, 15);
             this.UserNameLab.TabIndex = 4;
             this.UserNameLab.Text = "label4";
-            this.UserNameLab.Click += new System.EventHandler(this.label4_Click);
             // 
             // DepositLab
             // 
             this.DepositLab.AutoSize = true;
-            this.DepositLab.Location = new System.Drawing.Point(28, 154);
+            this.DepositLab.Location = new System.Drawing.Point(24, 116);
             this.DepositLab.Name = "DepositLab";
-            this.DepositLab.Size = new System.Drawing.Size(72, 20);
+            this.DepositLab.Size = new System.Drawing.Size(56, 15);
             this.DepositLab.TabIndex = 6;
             this.DepositLab.Text = "Deposit : ";
             // 
             // AccountLab
             // 
             this.AccountLab.AutoSize = true;
-            this.AccountLab.Location = new System.Drawing.Point(482, 240);
+            this.AccountLab.Location = new System.Drawing.Point(422, 180);
             this.AccountLab.Name = "AccountLab";
-            this.AccountLab.Size = new System.Drawing.Size(36, 20);
+            this.AccountLab.Size = new System.Drawing.Size(28, 15);
             this.AccountLab.TabIndex = 7;
             this.AccountLab.Text = "To : ";
             // 
             // DateLab
             // 
             this.DateLab.AutoSize = true;
-            this.DateLab.Location = new System.Drawing.Point(625, 22);
+            this.DateLab.Location = new System.Drawing.Point(547, 16);
             this.DateLab.Name = "DateLab";
-            this.DateLab.Size = new System.Drawing.Size(52, 20);
+            this.DateLab.Size = new System.Drawing.Size(40, 15);
             this.DateLab.TabIndex = 8;
             this.DateLab.Text = "Date : ";
             // 
             // WithdrawStat
             // 
             this.WithdrawStat.AutoSize = true;
-            this.WithdrawStat.Location = new System.Drawing.Point(398, 197);
+            this.WithdrawStat.Location = new System.Drawing.Point(348, 148);
             this.WithdrawStat.Name = "WithdrawStat";
-            this.WithdrawStat.Size = new System.Drawing.Size(91, 20);
+            this.WithdrawStat.Size = new System.Drawing.Size(72, 15);
             this.WithdrawStat.TabIndex = 10;
             this.WithdrawStat.Text = "Emtpy Lable";
-            this.WithdrawStat.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // AmountLab
             // 
             this.AmountLab.AutoSize = true;
-            this.AmountLab.Location = new System.Drawing.Point(28, 240);
+            this.AmountLab.Location = new System.Drawing.Point(24, 180);
             this.AmountLab.Name = "AmountLab";
-            this.AmountLab.Size = new System.Drawing.Size(72, 20);
+            this.AmountLab.Size = new System.Drawing.Size(57, 15);
             this.AmountLab.TabIndex = 11;
             this.AmountLab.Text = "Transfer : ";
             // 
             // WithdrawLab
             // 
             this.WithdrawLab.AutoSize = true;
-            this.WithdrawLab.Location = new System.Drawing.Point(438, 154);
+            this.WithdrawLab.Location = new System.Drawing.Point(383, 116);
             this.WithdrawLab.Name = "WithdrawLab";
-            this.WithdrawLab.Size = new System.Drawing.Size(80, 20);
+            this.WithdrawLab.Size = new System.Drawing.Size(64, 15);
             this.WithdrawLab.TabIndex = 12;
             this.WithdrawLab.Text = "Withdraw :";
             // 
             // textDeposit
             // 
-            this.textDeposit.Location = new System.Drawing.Point(106, 151);
+            this.textDeposit.Location = new System.Drawing.Point(93, 113);
+            this.textDeposit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textDeposit.Multiline = true;
             this.textDeposit.Name = "textDeposit";
-            this.textDeposit.Size = new System.Drawing.Size(158, 35);
+            this.textDeposit.Size = new System.Drawing.Size(139, 27);
             this.textDeposit.TabIndex = 13;
             // 
             // BtnDeposit
             // 
             this.BtnDeposit.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnDeposit.Location = new System.Drawing.Point(270, 151);
+            this.BtnDeposit.Location = new System.Drawing.Point(236, 113);
+            this.BtnDeposit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDeposit.Name = "BtnDeposit";
-            this.BtnDeposit.Size = new System.Drawing.Size(103, 35);
+            this.BtnDeposit.Size = new System.Drawing.Size(90, 26);
             this.BtnDeposit.TabIndex = 16;
             this.BtnDeposit.Text = "Deposit ";
             this.BtnDeposit.UseVisualStyleBackColor = false;
             // 
             // textWithdraw
             // 
-            this.textWithdraw.Location = new System.Drawing.Point(543, 151);
+            this.textWithdraw.Location = new System.Drawing.Point(475, 113);
+            this.textWithdraw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textWithdraw.Multiline = true;
             this.textWithdraw.Name = "textWithdraw";
-            this.textWithdraw.Size = new System.Drawing.Size(158, 35);
+            this.textWithdraw.Size = new System.Drawing.Size(139, 27);
             this.textWithdraw.TabIndex = 15;
             // 
             // BtnWithdraw
             // 
             this.BtnWithdraw.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnWithdraw.Location = new System.Drawing.Point(707, 151);
+            this.BtnWithdraw.Location = new System.Drawing.Point(619, 113);
+            this.BtnWithdraw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnWithdraw.Name = "BtnWithdraw";
-            this.BtnWithdraw.Size = new System.Drawing.Size(103, 35);
+            this.BtnWithdraw.Size = new System.Drawing.Size(90, 26);
             this.BtnWithdraw.TabIndex = 16;
             this.BtnWithdraw.Text = "Withdraw";
             this.BtnWithdraw.UseVisualStyleBackColor = false;
             // 
             // TxtTranUser
             // 
-            this.TxtTranUser.Location = new System.Drawing.Point(543, 237);
+            this.TxtTranUser.Location = new System.Drawing.Point(475, 178);
+            this.TxtTranUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTranUser.Multiline = true;
             this.TxtTranUser.Name = "TxtTranUser";
-            this.TxtTranUser.Size = new System.Drawing.Size(267, 35);
+            this.TxtTranUser.Size = new System.Drawing.Size(234, 27);
             this.TxtTranUser.TabIndex = 17;
             // 
             // TxtTranAmount
             // 
-            this.TxtTranAmount.Location = new System.Drawing.Point(106, 240);
+            this.TxtTranAmount.Location = new System.Drawing.Point(93, 180);
+            this.TxtTranAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTranAmount.Multiline = true;
             this.TxtTranAmount.Name = "TxtTranAmount";
-            this.TxtTranAmount.Size = new System.Drawing.Size(267, 35);
+            this.TxtTranAmount.Size = new System.Drawing.Size(234, 27);
             this.TxtTranAmount.TabIndex = 18;
             // 
             // BtnTransfer
             // 
             this.BtnTransfer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnTransfer.Location = new System.Drawing.Point(398, 286);
+            this.BtnTransfer.Location = new System.Drawing.Point(348, 214);
+            this.BtnTransfer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTransfer.Name = "BtnTransfer";
-            this.BtnTransfer.Size = new System.Drawing.Size(103, 35);
+            this.BtnTransfer.Size = new System.Drawing.Size(90, 26);
             this.BtnTransfer.TabIndex = 19;
             this.BtnTransfer.Text = "Transfer";
             this.BtnTransfer.UseVisualStyleBackColor = false;
@@ -219,27 +226,29 @@
             // TranStat
             // 
             this.TranStat.AutoSize = true;
-            this.TranStat.Location = new System.Drawing.Point(398, 345);
+            this.TranStat.Location = new System.Drawing.Point(348, 259);
             this.TranStat.Name = "TranStat";
-            this.TranStat.Size = new System.Drawing.Size(91, 20);
+            this.TranStat.Size = new System.Drawing.Size(72, 15);
             this.TranStat.TabIndex = 20;
             this.TranStat.Text = "Emtpy Lable";
             // 
             // BtnChangePass
             // 
             this.BtnChangePass.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnChangePass.Location = new System.Drawing.Point(28, 418);
+            this.BtnChangePass.Location = new System.Drawing.Point(24, 314);
+            this.BtnChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnChangePass.Name = "BtnChangePass";
-            this.BtnChangePass.Size = new System.Drawing.Size(144, 37);
+            this.BtnChangePass.Size = new System.Drawing.Size(126, 28);
             this.BtnChangePass.TabIndex = 21;
             this.BtnChangePass.Text = "Change Password ";
             this.BtnChangePass.UseVisualStyleBackColor = false;
+            this.BtnChangePass.Click += new System.EventHandler(this.BtnChangePass_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(870, 485);
+            this.ClientSize = new System.Drawing.Size(761, 364);
             this.Controls.Add(this.BtnChangePass);
             this.Controls.Add(this.TranStat);
             this.Controls.Add(this.BtnTransfer);
@@ -260,7 +269,6 @@
             this.Controls.Add(this.UserBalanceLab);
             this.Controls.Add(this.BalanceLab);
             this.Controls.Add(this.Message1Lab);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
