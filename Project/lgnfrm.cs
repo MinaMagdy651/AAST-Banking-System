@@ -42,5 +42,10 @@ namespace Project
                 frm.Show();
             }
         }
+
+        private void lgnfrm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

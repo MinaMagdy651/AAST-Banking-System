@@ -22,7 +22,6 @@ namespace Project
         public User( UInt32 number, string password) : base(number, password)
         {
 
-            
             connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Projects\BankSystem\Project\DataBase\DB.mdf;Integrated Security=True");
             try
             {
@@ -83,9 +82,5 @@ namespace Project
                     balance = value;
             }
         }
-
-        
-
-
     }
 }

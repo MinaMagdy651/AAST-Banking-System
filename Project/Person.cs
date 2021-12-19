@@ -22,7 +22,10 @@ namespace Project
             account_number = number;
             this.password = password;
 
-            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Projects\BankSystem3\Project\DataBase\DB.mdf;Integrated Security=True");
+            string path = System.Environment.CurrentDirectory;
+            string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
+
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path2 + ";Integrated Security=True");
             try
             {
                 con.Open();

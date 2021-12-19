@@ -106,6 +106,7 @@
             this.Name = "lgnfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Page";
+            this.Load += new System.EventHandler(this.lgnfrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
