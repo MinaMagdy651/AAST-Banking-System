@@ -11,11 +11,11 @@ namespace Project
     {
 
         protected UInt32 Account_number;
-        private string password;
+        private string password = "";
         private int adminLvl;
         private SqlConnection con;
         public bool found = false;
-        private uint account;
+       
 
         public Person(UInt32 number, string password)
         {

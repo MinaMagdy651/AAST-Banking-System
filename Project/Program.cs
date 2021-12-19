@@ -10,8 +10,10 @@ namespace Project
         [STAThread]
         static void Main()
         {
-            ApplicationConfiguration.Initialize();
-            Application.Run(new lgnfrm());
+            // ApplicationConfiguration.Initialize();
+            //Application.Run(new lgnfrm());
+            User u = new User(1);
+            MessageBox.Show(u.Name);
         }
     }
 }

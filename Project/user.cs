@@ -24,7 +24,7 @@ namespace Project
 
         public User( UInt32 number, string password) : base(number, password)
         {
-
+            
             connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Projects\BankSystem4\Project\DataBase\DB.mdf;Integrated Security=True");
             try
             {
@@ -35,19 +35,19 @@ namespace Project
                 Console.WriteLine("Error while connection to SQL server");
             }
 
-            string query = "select * from tbl_accounts_data where AccountNumber = " + Account_Number;
+            string query = "select * from tbl_accounts_data where AccountNumber = " + base.Account_number;
             
             SqlCommand command = new SqlCommand(query, connect);
             SqlDataReader dataReader = command.ExecuteReader();
             
             name =  (string)dataReader.GetValue(1);
             address =  (string)(dataReader.GetValue(2));
-            phone = (string)(dataReader.GetValue(3));
+           /* phone = (string)(dataReader.GetValue(3));
             email = (string)(dataReader.GetValue(4));
             account_type = (int)(dataReader.GetValue(5));
             balance = (decimal)dataReader.GetValue(6);
             debt = (decimal)dataReader.GetValue(7);
-            gender =   (char)dataReader.GetValue(8);
+            gender =   (char)dataReader.GetValue(8);*/
 
         }
 
@@ -65,19 +65,19 @@ namespace Project
                 Console.WriteLine("Error while connection to SQL server");
             }
 
-            string query = "select * from tbl_accounts_data where AccountNumber = " + Account_Number;
+            string query = "select * from tbl_accounts_data where AccountNumber = " + base.Account_Number;
 
             SqlCommand command = new SqlCommand(query, connect);
             SqlDataReader dataReader = command.ExecuteReader();
 
             name = (string)dataReader.GetValue(1);
             address = (string)(dataReader.GetValue(2));
-            phone = (string)(dataReader.GetValue(3));
+          /*  phone = (string)(dataReader.GetValue(3));
             email = (string)(dataReader.GetValue(4));
             account_type = (int)(dataReader.GetValue(5));
             balance = (decimal)dataReader.GetValue(6);
             debt = (decimal)dataReader.GetValue(7);
-            gender = (char)dataReader.GetValue(8);
+            gender = (char)dataReader.GetValue(8);*/
         }
        
         public string Name
