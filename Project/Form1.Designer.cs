@@ -48,6 +48,12 @@
             this.BtnTransfer = new System.Windows.Forms.Button();
             this.TranStat = new System.Windows.Forms.Label();
             this.BtnChangePass = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtbox_askLoan = new System.Windows.Forms.TextBox();
+            this.btn_askLoan = new System.Windows.Forms.Button();
+            this.askLoan_stat = new System.Windows.Forms.Label();
+            this.lbl_debt = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Message1Lab
@@ -72,7 +78,7 @@
             // UserBalanceLab
             // 
             this.UserBalanceLab.AutoSize = true;
-            this.UserBalanceLab.Location = new System.Drawing.Point(93, 58);
+            this.UserBalanceLab.Location = new System.Drawing.Point(78, 58);
             this.UserBalanceLab.Name = "UserBalanceLab";
             this.UserBalanceLab.Size = new System.Drawing.Size(38, 15);
             this.UserBalanceLab.TabIndex = 2;
@@ -81,7 +87,7 @@
             // BtnSignOut
             // 
             this.BtnSignOut.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnSignOut.Location = new System.Drawing.Point(621, 314);
+            this.BtnSignOut.Location = new System.Drawing.Point(633, 338);
             this.BtnSignOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnSignOut.Name = "BtnSignOut";
             this.BtnSignOut.Size = new System.Drawing.Size(88, 28);
@@ -94,7 +100,7 @@
             // 
             this.UserNameLab.AutoSize = true;
             this.UserNameLab.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.UserNameLab.Location = new System.Drawing.Point(95, 16);
+            this.UserNameLab.Location = new System.Drawing.Point(61, 16);
             this.UserNameLab.Name = "UserNameLab";
             this.UserNameLab.Size = new System.Drawing.Size(38, 15);
             this.UserNameLab.TabIndex = 4;
@@ -112,7 +118,7 @@
             // AccountLab
             // 
             this.AccountLab.AutoSize = true;
-            this.AccountLab.Location = new System.Drawing.Point(422, 180);
+            this.AccountLab.Location = new System.Drawing.Point(348, 216);
             this.AccountLab.Name = "AccountLab";
             this.AccountLab.Size = new System.Drawing.Size(28, 15);
             this.AccountLab.TabIndex = 7;
@@ -131,7 +137,7 @@
             // WithdrawStat
             // 
             this.WithdrawStat.AutoSize = true;
-            this.WithdrawStat.Location = new System.Drawing.Point(348, 148);
+            this.WithdrawStat.Location = new System.Drawing.Point(323, 254);
             this.WithdrawStat.Name = "WithdrawStat";
             this.WithdrawStat.Size = new System.Drawing.Size(72, 15);
             this.WithdrawStat.TabIndex = 10;
@@ -140,7 +146,7 @@
             // AmountLab
             // 
             this.AmountLab.AutoSize = true;
-            this.AmountLab.Location = new System.Drawing.Point(24, 180);
+            this.AmountLab.Location = new System.Drawing.Point(24, 216);
             this.AmountLab.Name = "AmountLab";
             this.AmountLab.Size = new System.Drawing.Size(57, 15);
             this.AmountLab.TabIndex = 11;
@@ -149,7 +155,7 @@
             // WithdrawLab
             // 
             this.WithdrawLab.AutoSize = true;
-            this.WithdrawLab.Location = new System.Drawing.Point(383, 116);
+            this.WithdrawLab.Location = new System.Drawing.Point(24, 161);
             this.WithdrawLab.Name = "WithdrawLab";
             this.WithdrawLab.Size = new System.Drawing.Size(64, 15);
             this.WithdrawLab.TabIndex = 12;
@@ -161,43 +167,44 @@
             this.textDeposit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textDeposit.Multiline = true;
             this.textDeposit.Name = "textDeposit";
-            this.textDeposit.Size = new System.Drawing.Size(139, 27);
+            this.textDeposit.Size = new System.Drawing.Size(234, 27);
             this.textDeposit.TabIndex = 13;
             // 
             // BtnDeposit
             // 
             this.BtnDeposit.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnDeposit.Location = new System.Drawing.Point(236, 113);
+            this.BtnDeposit.Location = new System.Drawing.Point(348, 113);
             this.BtnDeposit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnDeposit.Name = "BtnDeposit";
-            this.BtnDeposit.Size = new System.Drawing.Size(90, 26);
+            this.BtnDeposit.Size = new System.Drawing.Size(90, 27);
             this.BtnDeposit.TabIndex = 16;
             this.BtnDeposit.Text = "Deposit ";
             this.BtnDeposit.UseVisualStyleBackColor = false;
+            this.BtnDeposit.Click += new System.EventHandler(this.BtnDeposit_Click);
             // 
             // textWithdraw
             // 
-            this.textWithdraw.Location = new System.Drawing.Point(475, 113);
+            this.textWithdraw.Location = new System.Drawing.Point(93, 161);
             this.textWithdraw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textWithdraw.Multiline = true;
             this.textWithdraw.Name = "textWithdraw";
-            this.textWithdraw.Size = new System.Drawing.Size(139, 27);
+            this.textWithdraw.Size = new System.Drawing.Size(234, 27);
             this.textWithdraw.TabIndex = 15;
             // 
             // BtnWithdraw
             // 
             this.BtnWithdraw.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnWithdraw.Location = new System.Drawing.Point(619, 113);
+            this.BtnWithdraw.Location = new System.Drawing.Point(348, 161);
             this.BtnWithdraw.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnWithdraw.Name = "BtnWithdraw";
-            this.BtnWithdraw.Size = new System.Drawing.Size(90, 26);
+            this.BtnWithdraw.Size = new System.Drawing.Size(90, 27);
             this.BtnWithdraw.TabIndex = 16;
             this.BtnWithdraw.Text = "Withdraw";
             this.BtnWithdraw.UseVisualStyleBackColor = false;
             // 
             // TxtTranUser
             // 
-            this.TxtTranUser.Location = new System.Drawing.Point(475, 178);
+            this.TxtTranUser.Location = new System.Drawing.Point(382, 216);
             this.TxtTranUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTranUser.Multiline = true;
             this.TxtTranUser.Name = "TxtTranUser";
@@ -206,7 +213,7 @@
             // 
             // TxtTranAmount
             // 
-            this.TxtTranAmount.Location = new System.Drawing.Point(93, 180);
+            this.TxtTranAmount.Location = new System.Drawing.Point(93, 216);
             this.TxtTranAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.TxtTranAmount.Multiline = true;
             this.TxtTranAmount.Name = "TxtTranAmount";
@@ -216,10 +223,10 @@
             // BtnTransfer
             // 
             this.BtnTransfer.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnTransfer.Location = new System.Drawing.Point(348, 214);
+            this.BtnTransfer.Location = new System.Drawing.Point(631, 216);
             this.BtnTransfer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTransfer.Name = "BtnTransfer";
-            this.BtnTransfer.Size = new System.Drawing.Size(90, 26);
+            this.BtnTransfer.Size = new System.Drawing.Size(90, 27);
             this.BtnTransfer.TabIndex = 19;
             this.BtnTransfer.Text = "Transfer";
             this.BtnTransfer.UseVisualStyleBackColor = false;
@@ -227,7 +234,7 @@
             // TranStat
             // 
             this.TranStat.AutoSize = true;
-            this.TranStat.Location = new System.Drawing.Point(348, 259);
+            this.TranStat.Location = new System.Drawing.Point(454, 145);
             this.TranStat.Name = "TranStat";
             this.TranStat.Size = new System.Drawing.Size(72, 15);
             this.TranStat.TabIndex = 20;
@@ -236,7 +243,7 @@
             // BtnChangePass
             // 
             this.BtnChangePass.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.BtnChangePass.Location = new System.Drawing.Point(24, 314);
+            this.BtnChangePass.Location = new System.Drawing.Point(7, 325);
             this.BtnChangePass.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnChangePass.Name = "BtnChangePass";
             this.BtnChangePass.Size = new System.Drawing.Size(126, 28);
@@ -245,11 +252,76 @@
             this.BtnChangePass.UseVisualStyleBackColor = false;
             this.BtnChangePass.Click += new System.EventHandler(this.BtnChangePass_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 278);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(75, 15);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Ask For Loan";
+            // 
+            // txtbox_askLoan
+            // 
+            this.txtbox_askLoan.Location = new System.Drawing.Point(93, 275);
+            this.txtbox_askLoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtbox_askLoan.Multiline = true;
+            this.txtbox_askLoan.Name = "txtbox_askLoan";
+            this.txtbox_askLoan.Size = new System.Drawing.Size(234, 27);
+            this.txtbox_askLoan.TabIndex = 23;
+            // 
+            // btn_askLoan
+            // 
+            this.btn_askLoan.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.btn_askLoan.Location = new System.Drawing.Point(350, 275);
+            this.btn_askLoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_askLoan.Name = "btn_askLoan";
+            this.btn_askLoan.Size = new System.Drawing.Size(88, 28);
+            this.btn_askLoan.TabIndex = 24;
+            this.btn_askLoan.Text = "Ask";
+            this.btn_askLoan.UseVisualStyleBackColor = false;
+            // 
+            // askLoan_stat
+            // 
+            this.askLoan_stat.AutoSize = true;
+            this.askLoan_stat.Location = new System.Drawing.Point(469, 282);
+            this.askLoan_stat.Name = "askLoan_stat";
+            this.askLoan_stat.Size = new System.Drawing.Size(72, 15);
+            this.askLoan_stat.TabIndex = 25;
+            this.askLoan_stat.Text = "Emtpy Lable";
+            this.askLoan_stat.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lbl_debt
+            // 
+            this.lbl_debt.AutoSize = true;
+            this.lbl_debt.Location = new System.Drawing.Point(213, 58);
+            this.lbl_debt.Name = "lbl_debt";
+            this.lbl_debt.Size = new System.Drawing.Size(38, 15);
+            this.lbl_debt.TabIndex = 27;
+            this.lbl_debt.Text = "label3";
+            this.lbl_debt.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(172, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 15);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "Debt:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(761, 364);
+            this.ClientSize = new System.Drawing.Size(726, 364);
+            this.Controls.Add(this.lbl_debt);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.askLoan_stat);
+            this.Controls.Add(this.btn_askLoan);
+            this.Controls.Add(this.txtbox_askLoan);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.BtnChangePass);
             this.Controls.Add(this.TranStat);
             this.Controls.Add(this.BtnTransfer);
@@ -301,5 +373,11 @@
         private Button BtnTransfer;
         private Label TranStat;
         private Button BtnChangePass;
+        private Label label1;
+        private TextBox txtbox_askLoan;
+        private Button btn_askLoan;
+        private Label askLoan_stat;
+        private Label lbl_debt;
+        private Label label3;
     }
 }

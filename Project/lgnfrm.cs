@@ -37,9 +37,8 @@ namespace Project
             p.loginCheck();
             if (p.found)
             {
-                
                 this.Hide();
-                Form1 frm = new Form1();
+                Form1 frm = new Form1(p.Account_Number, p.Password);
                 frm.Closed += (s, args) => this.Close();
                 frm.Show();
                 

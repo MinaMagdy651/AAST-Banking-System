@@ -14,18 +14,25 @@ namespace Project
         private string phone;
         private string email;
         private int account_type;
-        private decimal balance;
-        private decimal debt;
+        double balance;
+        private double debt;
         private char gender;
 
         private SqlConnection connect;
 
         
 
-        public User( UInt32 number, string password) : base(number, password)
+       
+
+
+
+        public User(UInt32 accountNumber, string pass) : base(accountNumber, pass) 
         {
-            
-            connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Projects\BankSystem4\Project\DataBase\DB.mdf;Integrated Security=True");
+            string path = System.Environment.CurrentDirectory;
+            string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
+
+
+            connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path2 + ";Integrated Security=True");
             try
             {
                 connect.Open();
@@ -35,49 +42,26 @@ namespace Project
                 Console.WriteLine("Error while connection to SQL server");
             }
 
-            string query = "select * from tbl_accounts_data where AccountNumber = " + base.Account_number;
-            
-            SqlCommand command = new SqlCommand(query, connect);
-            SqlDataReader dataReader = command.ExecuteReader();
-            
-            name =  (string)dataReader.GetValue(1);
-            address =  (string)(dataReader.GetValue(2));
-           /* phone = (string)(dataReader.GetValue(3));
-            email = (string)(dataReader.GetValue(4));
-            account_type = (int)(dataReader.GetValue(5));
-            balance = (decimal)dataReader.GetValue(6);
-            debt = (decimal)dataReader.GetValue(7);
-            gender =   (char)dataReader.GetValue(8);*/
-
-        }
-
-
-
-        public User(UInt32 account) : base(account) 
-        {
-            connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Projects\BankSystem4\Project\DataBase\DB.mdf;Integrated Security=True");
-            try
-            {
-                connect.Open();
-            }
-            catch (SqlException)
-            {
-                Console.WriteLine("Error while connection to SQL server");
-            }
-
-            string query = "select * from tbl_accounts_data where AccountNumber = " + base.Account_Number;
+            string query = "select * from tbl_accounts_data where AccountNumber = " + Account_Number;
 
             SqlCommand command = new SqlCommand(query, connect);
             SqlDataReader dataReader = command.ExecuteReader();
+            if (dataReader.Read())
+            {
+                name = (string)dataReader.GetValue(1);
+                address = (string)(dataReader.GetValue(2));
+                phone = (string)(dataReader.GetValue(3));
+                email = (string)(dataReader.GetValue(4));
+                AccountType = Int32.Parse("" + dataReader.GetValue(5));
+                balance = Double.Parse("" + dataReader.GetValue(6));
+                debt = Double.Parse("" + dataReader.GetValue(7));
+                gender = Convert.ToChar("" + dataReader.GetValue(8));
+            }
+            else
+            {
+                Console.WriteLine("Error while parsing data from SQL tables");
+            }
 
-            name = (string)dataReader.GetValue(1);
-            address = (string)(dataReader.GetValue(2));
-          /*  phone = (string)(dataReader.GetValue(3));
-            email = (string)(dataReader.GetValue(4));
-            account_type = (int)(dataReader.GetValue(5));
-            balance = (decimal)dataReader.GetValue(6);
-            debt = (decimal)dataReader.GetValue(7);
-            gender = (char)dataReader.GetValue(8);*/
         }
        
         public string Name
@@ -105,21 +89,11 @@ namespace Project
             get { return account_type; }
             set { account_type = value; }
         }
-        public decimal Balance
-        {
-            get {
-                string query1 = "select * from tbl_accounts_data where AccountNumber = " + Account_Number;
-
-                SqlCommand command1 = new SqlCommand(query1, connect);
-                SqlDataReader dataReader = command1.ExecuteReader();
-                return (decimal)dataReader.GetValue(6);
-            }
-            set
-            {
-               balance = value;
-            }
-        }
-        public decimal Debt
+        /// <summary>
+        /// changes may apply
+        /// </summary>
+      
+        public double Debt
         {
             get { return debt; }
             set { debt = value; }
@@ -129,11 +103,15 @@ namespace Project
                 get { return gender; }
                 set { gender = value; }
         }
-
-        public decimal withdraw(decimal val)
+        public double Balance
+        {
+            get { return balance; }
+            set { balance = value; }
+        }
+        public double Withdraw(double val)
         {
             
-            if (val >= Balance)
+            if (val <= Balance)
             {
                 Balance -= val;
                 string query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
@@ -141,7 +119,7 @@ namespace Project
             }
          return Balance;
         }
-        public decimal deposit(decimal val)
+        public double Deposit(double val)
         {
 
             if (val > 0)
@@ -152,31 +130,31 @@ namespace Project
             return Balance;
         }
 
-        public void changePassword(string oldpass , string newpass)
+        public void ChangePassword(string oldpass , string newpass)
         {
             string query1 = "select * from Users where AccountNumber = " + Account_Number;
             SqlCommand command1 = new SqlCommand(query1, connect);
             SqlDataReader dataReader = command1.ExecuteReader();
 
-            String pass = (string)dataReader.GetValue(1);
+            string pass = (string)dataReader.GetValue(1);
             if (pass == oldpass)
             {
                 string query = "UPDATE Users SET Password = " + newpass + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
             }
         }
-        public bool askLoan(decimal amount)
+        public bool AskLoan(double amount)
         {
            
 
-            if (Balance >= (amount + (amount * (decimal)0.10)) && debt == 0)
+            if (Balance >= (amount + (amount * (double)0.10)) && debt == 0)
                 //debt = amount + (amount * (decimal)0.10);
                 return true;
             
         return false;
         }
         
-        public static void Transfer(User user1  , User user2, decimal val)
+        public static void Transfer(User user1, User user2, double val)
         {
             UInt32 account2 = user2.Account_number;
             string query1 = "select * from tbl_accounts_data where AccountNumber = " + account2;
@@ -186,11 +164,11 @@ namespace Project
             
             if (dataReader.Read() && val > 0)
             {   
-                decimal bal = user1.Balance;
-                decimal newbal1 = user1.withdraw(val);
+                double bal = user1.Balance;
+                double newbal1 = user1.Withdraw(val);
                 if (bal != newbal1)
                 {
-                    decimal newbal2 = user2.Balance + val;
+                    double newbal2 = user2.Balance + val;
                     string query = "UPDATE tbl_accounts_data SET Balance = " + newbal2 + " WHERE AccountNumber = " + user2.Account_Number;
                     SqlCommand command = new SqlCommand(query, user2.connect);
                 }
