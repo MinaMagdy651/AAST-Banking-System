@@ -22,7 +22,7 @@ namespace Project
             account_number = number;
             this.password = password;
 
-            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='E:\mina aast\Term 5\Advanced programming\Project\Project\DataBase\DB.mdf';Integrated Security=True");
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\Projects\BankSystem3\Project\DataBase\DB.mdf;Integrated Security=True");
             try
             {
                 con.Open();
