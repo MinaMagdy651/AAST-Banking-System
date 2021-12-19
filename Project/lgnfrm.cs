@@ -32,14 +32,18 @@ namespace Project
         private void btn_lgin_Click(object sender, EventArgs e)
         {
             //update 4
+
             Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
             p.loginCheck();
             if (p.found)
             {
+                User u = new User(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
+                
                 this.Hide();
                 Form1 frm = new Form1();
                 frm.Closed += (s, args) => this.Close();
                 frm.Show();
+                
             }
         }
 
