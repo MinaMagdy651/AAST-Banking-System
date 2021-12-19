@@ -12,7 +12,6 @@ namespace Project
 {
     public partial class Form1 : Form
     {
-        private lgnfrm frm2;
         public Form1()
         {
             InitializeComponent();
@@ -22,26 +21,29 @@ namespace Project
         {
 
         }
-        public Form1(UInt32 account, string pass)
-        {
-            Account = account;
-            password = pass;
-        }
-        public UInt32 Account;
-        public string password;
 
-        public void load()
+        private void Form1_Load(object sender, EventArgs e)
         {
-            User u = new User(Account, password);
-            label1.Text = u.getName();
-        }
-       
-        public void Form1_Load(object sender, EventArgs e)
-        {
-           
+            DateLab.Text = DateTime.Now.ToLongDateString();
         }
 
+        private void BtnChangePass_Click(object sender, EventArgs e)
+        {
+            ChangePass chng = new ChangePass();
+            chng.Show();
+        }
 
+        private void BtnSignOut_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            lgnfrm newlgn = new lgnfrm();
+            newlgn.Closed += (s, args) => this.Close();
+            newlgn.Show();
+        }
 
+        private void DateLab_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
