@@ -37,10 +37,8 @@ namespace Project
             p.loginCheck();
             if (p.found)
             {
-                User u = new User(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
-                
                 this.Hide();
-                Form1 frm = new Form1();
+                Form1 frm = new Form1(p.Account_Number, p.Password);
                 frm.Closed += (s, args) => this.Close();
                 frm.Show();
                 
