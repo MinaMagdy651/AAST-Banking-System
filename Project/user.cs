@@ -173,5 +173,20 @@ namespace Project
             }
             return false;
         }
+
+        public bool UserFound(UInt32 accountNumber)
+        {
+            string query = "select * from tbl_accounts_data where AccountNumber = " + accountNumber;
+            SqlCommand command = new SqlCommand(query, connect);
+            SqlDataReader dataReader = command.ExecuteReader();
+
+            if (dataReader.Read())
+            {
+                dataReader.Close();
+                return true;
+            }
+            dataReader.Close();
+            return false;
+        }
     }
 }
