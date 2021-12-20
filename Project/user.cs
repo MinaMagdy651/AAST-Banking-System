@@ -133,7 +133,6 @@ namespace Project
             if (base.Password == oldpass)
             {
                 base.Password = newpass;
-
                 string query = "UPDATE Users SET Password = '" + base.Password + "' WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
                 command.ExecuteNonQuery();
@@ -159,9 +158,13 @@ namespace Project
 
         public bool Transfer(User user2, double val)
         {
-            if (user2.Account_Number != 0 && val > 0)
+            string query = "select * from tbl_accounts_data where AccountNumber = " + user2.Account_Number;
+
+            SqlCommand command = new SqlCommand(query, connect);
+            SqlDataReader dataReader = command.ExecuteReader();
+
+            if (dataReader.Read() && val > 0)
             {
-                double bal = Balance;
                 if (Withdraw(val))
                 {
                     user2.Deposit(val);
