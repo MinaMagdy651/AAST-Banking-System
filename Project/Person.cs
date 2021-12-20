@@ -14,7 +14,7 @@ namespace Project
         private string password = "";
         private int adminLvl;
         private SqlConnection con;
-        public bool found = false;
+        
 
         public Person(UInt32 number, string password)
         {
@@ -34,7 +34,6 @@ namespace Project
             {
                 Console.WriteLine("Error while connection to SQL server");
             }
-
         }
 
 
@@ -52,7 +51,7 @@ namespace Project
             get { return adminLvl;}
             set { adminLvl = value; }
         }
-        public void loginCheck()
+        public bool loginCheck()
         {
             string query = "select * from Users where AccountNumber = " + Account_Number;
             SqlCommand command = new SqlCommand(query, con);
@@ -67,7 +66,7 @@ namespace Project
                 else
                 {
                     AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
-                    found = true;
+                    return true;
                 }
                 
             }
@@ -75,6 +74,7 @@ namespace Project
             {
                 MessageBox.Show("Account Number not found");
             }
+            return false;
         }
         
     }

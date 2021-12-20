@@ -37,8 +37,8 @@ namespace Project
             {
                 Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
                 passwordtxt.Clear();
-                p.loginCheck();
-                if (p.found)
+    
+                if (p.loginCheck())
                 {
                     this.Hide();
                     Form1 frm = new Form1(p.Account_Number, p.Password);
