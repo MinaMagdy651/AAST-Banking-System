@@ -57,7 +57,7 @@ namespace Project
             {
                 Console.WriteLine("Error while parsing data from SQL tables");
             }
-
+            dataReader.Close();
         }
        
         public string Name
@@ -107,6 +107,8 @@ namespace Project
                 Balance -= val;
                 string query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
                 return true;
             }
          return false;
@@ -119,6 +121,8 @@ namespace Project
                 Balance += val;
                 string query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
                 return true;
             }
             return false;
