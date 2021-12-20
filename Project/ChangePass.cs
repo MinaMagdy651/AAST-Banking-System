@@ -35,7 +35,7 @@ namespace Project
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*if (!string.IsNullOrEmpty(TxtOldPass.Text) && !string.IsNullOrEmpty(TxtNewPass.Text))
+            if (!string.IsNullOrEmpty(TxtOldPass.Text) && !string.IsNullOrEmpty(TxtNewPass.Text))
             {
                 if (u1.ChangePassword(TxtOldPass.Text, TxtNewPass.Text))
                 {
@@ -53,9 +53,7 @@ namespace Project
                 MessageBox.Show("Please enter valid data");
                 TxtOldPass.Clear();
                 TxtNewPass.Clear();
-            } */
-            u1.ChangePassword("mina", "a7a");
-
+            } 
         }
     }
 }

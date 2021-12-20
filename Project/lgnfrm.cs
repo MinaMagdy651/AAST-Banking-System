@@ -36,6 +36,7 @@ namespace Project
             if(!string.IsNullOrEmpty(usernametxt.Text) && usernametxt.Text.All(char.IsNumber) && !string.IsNullOrEmpty(passwordtxt.Text))
             {
                 Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
+                passwordtxt.Clear();
                 p.loginCheck();
                 if (p.found)
                 {
@@ -50,7 +51,6 @@ namespace Project
             {
                 MessageBox.Show("Please enter valid data");
                 usernametxt.Clear();
-                passwordtxt.Clear();
             }
             
         }
