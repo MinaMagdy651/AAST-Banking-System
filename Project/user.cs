@@ -232,6 +232,18 @@ namespace Project
                 command.Dispose();
                 return true;
             }
+            else if(val > 0 && Balance >= val && val > debt)
+            {
+                double exceed = val - debt;
+                Balance -= debt;
+                Balance += exceed;
+                string query = "UPDATE tbl_accounts_data SET  Balance = " + Balance + " , Debt = " + 0 + " WHERE AccountNumber = " + Account_Number;
+                SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
+                return true;
+            }
+            
             return false;
         }
     }
