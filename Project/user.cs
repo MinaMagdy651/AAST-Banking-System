@@ -22,10 +22,6 @@ namespace Project
 
         
 
-       
-
-
-
         public User(UInt32 accountNumber, string pass) : base(accountNumber, pass) 
         {
             string path = System.Environment.CurrentDirectory;
@@ -110,7 +106,6 @@ namespace Project
         }
         public double Withdraw(double val)
         {
-            
             if (val <= Balance)
             {
                 Balance -= val;
@@ -132,17 +127,15 @@ namespace Project
 
         public void ChangePassword(string oldpass , string newpass)
         {
-            string query1 = "select * from Users where AccountNumber = " + Account_Number;
-            SqlCommand command1 = new SqlCommand(query1, connect);
-            SqlDataReader dataReader = command1.ExecuteReader();
-
-            string pass = (string)dataReader.GetValue(1);
-            if (pass == oldpass)
+         
+            if (password == oldpass)
             {
-                string query = "UPDATE Users SET Password = " + newpass + " WHERE AccountNumber = " + Account_Number;
+                password = newpass;
+                string query = "UPDATE Users SET Password = " + password + " WHERE AccountNumber = " + base.Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
             }
         }
+
         public bool AskLoan(double amount)
         {
            
@@ -155,23 +148,13 @@ namespace Project
         }
         
         public static void Transfer(User user1, User user2, double val)
-        {
-            UInt32 account2 = user2.Account_number;
-            string query1 = "select * from tbl_accounts_data where AccountNumber = " + account2;
-            SqlCommand command1 = new SqlCommand(query1, user2.connect);
-            SqlDataReader dataReader = command1.ExecuteReader();
-
-            
-            if (dataReader.Read() && val > 0)
+        { 
+            if (user2.Account_number != 0 && val > 0)
             {   
                 double bal = user1.Balance;
                 double newbal1 = user1.Withdraw(val);
                 if (bal != newbal1)
-                {
-                    double newbal2 = user2.Balance + val;
-                    string query = "UPDATE tbl_accounts_data SET Balance = " + newbal2 + " WHERE AccountNumber = " + user2.Account_Number;
-                    SqlCommand command = new SqlCommand(query, user2.connect);
-                }
+                    user2.Deposit(val);
             }
         }
 

@@ -11,7 +11,7 @@ namespace Project
     {
 
         protected UInt32 Account_number = 0;
-        private string password = "";
+        protected string password = "";
         private int adminLvl;
         private SqlConnection con;
         public bool found = false;
@@ -45,6 +45,7 @@ namespace Project
         public string Password
         {
             get { return password;}
+            set { password = value; }   
         }
         public int AdminLvl
         {
