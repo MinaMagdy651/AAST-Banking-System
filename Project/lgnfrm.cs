@@ -33,16 +33,26 @@ namespace Project
         {
             //update 4
 
-            Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
-            p.loginCheck();
-            if (p.found)
+            if(!string.IsNullOrEmpty(usernametxt.Text) && usernametxt.Text.All(char.IsNumber) && !string.IsNullOrEmpty(passwordtxt.Text))
             {
-                this.Hide();
-                Form1 frm = new Form1(p.Account_Number, p.Password);
-                frm.Closed += (s, args) => this.Close();
-                frm.Show();
-                
+                Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
+                p.loginCheck();
+                if (p.found)
+                {
+                    this.Hide();
+                    Form1 frm = new Form1(p.Account_Number, p.Password);
+                    frm.Closed += (s, args) => this.Close();
+                    frm.Show();
+
+                }
             }
+            else
+            {
+                MessageBox.Show("Please enter valid data");
+                usernametxt.Clear();
+                passwordtxt.Clear();
+            }
+            
         }
 
         private void lgnfrm_Load(object sender, EventArgs e)

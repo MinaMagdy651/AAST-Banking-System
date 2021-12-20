@@ -34,7 +34,7 @@
             this.TxtOldPass = new System.Windows.Forms.TextBox();
             this.TxtNewPass = new System.Windows.Forms.TextBox();
             this.ChangePassStat = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_save = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -87,26 +87,26 @@
             this.ChangePassStat.AutoSize = true;
             this.ChangePassStat.Location = new System.Drawing.Point(99, 156);
             this.ChangePassStat.Name = "ChangePassStat";
-            this.ChangePassStat.Size = new System.Drawing.Size(72, 15);
+            this.ChangePassStat.Size = new System.Drawing.Size(0, 15);
             this.ChangePassStat.TabIndex = 5;
-            this.ChangePassStat.Text = "Empty Label";
             // 
-            // button1
+            // btn_save
             // 
-            this.button1.Location = new System.Drawing.Point(10, 188);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 22);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Save Change";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_save.Location = new System.Drawing.Point(10, 188);
+            this.btn_save.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_save.Name = "btn_save";
+            this.btn_save.Size = new System.Drawing.Size(97, 22);
+            this.btn_save.TabIndex = 6;
+            this.btn_save.Text = "Save Change";
+            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.Click += new System.EventHandler(this.button1_Click);
             // 
             // ChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(289, 234);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_save);
             this.Controls.Add(this.ChangePassStat);
             this.Controls.Add(this.TxtNewPass);
             this.Controls.Add(this.TxtOldPass);
@@ -131,6 +131,6 @@
         private TextBox TxtOldPass;
         private TextBox TxtNewPass;
         private Label ChangePassStat;
-        private Button button1;
+        private Button btn_save;
     }
 }
