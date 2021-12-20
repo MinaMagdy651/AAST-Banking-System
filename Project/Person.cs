@@ -11,7 +11,7 @@ namespace Project
     {
 
         protected UInt32 Account_number = 0;
-        protected string password = "";
+        private string password = "";
         private int adminLvl;
         private SqlConnection con;
         public bool found = false;

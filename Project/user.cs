@@ -85,10 +85,6 @@ namespace Project
             get { return account_type; }
             set { account_type = value; }
         }
-        /// <summary>
-        /// changes may apply
-        /// </summary>
-      
         public double Debt
         {
             get { return debt; }
@@ -104,65 +100,67 @@ namespace Project
             get { return balance; }
             set { balance = value; }
         }
-        public double Withdraw(double val)
+        public bool Withdraw(double val)
         {
-            if (val <= Balance)
+            if (val <= Balance && val > 0)
             {
                 Balance -= val;
                 string query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                return true;
             }
-         return Balance;
+         return false;
         }
-        public double Deposit(double val)
+        public bool Deposit(double val)
         {
 
             if (val > 0)
+            {
                 Balance += val;
-            string query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
-            SqlCommand command = new SqlCommand(query, connect);
-
-            return Balance;
+                string query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
+                SqlCommand command = new SqlCommand(query, connect);
+                return true;
+            }
+            return false;
         }
 
-        public void ChangePassword(string oldpass , string newpass)
+        public bool ChangePassword(string oldpass , string newpass)
         {
          
-            if (password == oldpass)
+            if (base.Password == oldpass)
             {
-                password = newpass;
-                string query = "UPDATE Users SET Password = " + password + " WHERE AccountNumber = " + base.Account_Number;
+                base.Password = newpass;
+                string query = "UPDATE Users SET Password = " + base.Password + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                return true;
             }
+            return false;
         }
 
         public bool AskLoan(double amount)
         {
-           
-
-            if (Balance >= (amount + (amount * (double)0.10)) && debt == 0)
-                //debt = amount + (amount * (decimal)0.10);
+            if(amount * (double)(0.14) >= (Balance - Debt))
+            {
+                Debt += amount * (double)(0.14);
+                string query = "UPDATE tbl_accounts_data SET Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
+                SqlCommand command = new SqlCommand(query, connect);
                 return true;
-            
-        return false;
+            }
+            return false;
         }
         
-        public static void Transfer(User user1, User user2, double val)
+        public bool Transfer(User user2, double val)
         { 
             if (user2.Account_number != 0 && val > 0)
-            {   
-                double bal = user1.Balance;
-                double newbal1 = user1.Withdraw(val);
-                if (bal != newbal1)
+            {
+                double bal = Balance;
+                if (Withdraw(val))
+                {
                     user2.Deposit(val);
+                    return true;
+                }  
             }
+            return false;
         }
-
-
-
-
-
-
-
     }
 }
