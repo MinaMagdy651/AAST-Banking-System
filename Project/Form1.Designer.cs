@@ -137,9 +137,8 @@
             this.transferstat.AutoSize = true;
             this.transferstat.Location = new System.Drawing.Point(323, 254);
             this.transferstat.Name = "transferstat";
-            this.transferstat.Size = new System.Drawing.Size(81, 15);
+            this.transferstat.Size = new System.Drawing.Size(0, 15);
             this.transferstat.TabIndex = 10;
-            this.transferstat.Text = "transfer status";
             this.transferstat.Click += new System.EventHandler(this.transferstat_Click);
             // 
             // AmountLab
@@ -282,6 +281,7 @@
             this.btn_askLoan.TabIndex = 24;
             this.btn_askLoan.Text = "Ask";
             this.btn_askLoan.UseVisualStyleBackColor = false;
+            this.btn_askLoan.Click += new System.EventHandler(this.btn_askLoan_Click);
             // 
             // askLoan_stat
             // 

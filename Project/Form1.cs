@@ -139,7 +139,42 @@ namespace Project
 
         private void BtnTransfer_Click(object sender, EventArgs e)
         {
-            
+            if (!string.IsNullOrEmpty(TxtTranAmount.Text) && !string.IsNullOrEmpty(TxtTranUser.Text) 
+                && TxtTranAmount.Text.All(char.IsNumber) && TxtTranUser.Text.All(char.IsNumber))
+            {
+                double val = Double.Parse(TxtTranAmount.Text);
+                UInt32 user2_acc_num = UInt32.Parse(TxtTranUser.Text);
+                User user2 = new User(user2_acc_num);
+                if(user1.Account_Number == user2.Account_Number)
+                {
+                    MessageBox.Show("Can not transfer money to your own account");
+                    TxtTranUser.Clear();
+                } else if (user1.Transfer(user2, val))
+                {
+                    transferstat.Text = string.Format("Transfered ${0} to: {1}", val, user2.Name);
+                    UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                }
+                else
+                {
+                    transferstat.Text = "Insufficient or account doesn't exist";
+                    TxtTranUser.Clear();
+                    TxtTranAmount.Clear();
+
+                }
+
+            }
+            else
+            {
+                TxtTranUser.Clear();
+                TxtTranAmount.Clear();
+                MessageBox.Show("Pleanser Enter valid data");
+            }
+           
+        }
+
+        private void btn_askLoan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
