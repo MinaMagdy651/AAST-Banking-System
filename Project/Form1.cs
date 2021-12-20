@@ -191,5 +191,30 @@ namespace Project
                 txtbox_askLoan.Clear();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(!string.IsNullOrEmpty(payDebt.Text) && payDebt.Text.All(char.IsNumber))
+            {
+                double val = Double.Parse(payDebt.Text);
+                if (user1.paydebt(val) )
+                {
+                    UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                    lbl_debt.Text = Convert.ToString(user1.Debt);
+                    label4.Text = "Completed Successfully";
+                }
+                else
+                {
+                    label4.Text = "Please Enter valid amout";
+                    txtbox_askLoan.Clear();
+                }
+           
+            }
+            else
+            {
+                label4.Text = "Please Enter valid amout";
+                txtbox_askLoan.Clear();
+            }
+        }
     }
 }

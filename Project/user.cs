@@ -220,5 +220,19 @@ namespace Project
             dataReader.Close();
             return false;
         }
+        public bool paydebt(double val)
+        {
+            if(val > 0 && Balance >= val && debt >= val)
+            {
+                Balance -= val;
+                debt -= val;
+                string query = "UPDATE tbl_accounts_data SET  Balance = " + Balance + " , Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
+                SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
+                return true;
+            }
+            return false;
+        }
     }
 }
