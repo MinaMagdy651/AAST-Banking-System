@@ -20,9 +20,9 @@ namespace Project
 
         private SqlConnection connect;
 
-        
 
-        public User(UInt32 accountNumber, string pass) : base(accountNumber, pass) 
+
+        public User(UInt32 accountNumber, string pass) : base(accountNumber, pass)
         {
             string path = System.Environment.CurrentDirectory;
             string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
@@ -59,7 +59,7 @@ namespace Project
             }
             dataReader.Close();
         }
-       
+
         public string Name
         {
             get { return name; }
@@ -92,8 +92,8 @@ namespace Project
         }
         public char Gender
         {
-                get { return gender; }
-                set { gender = value; }
+            get { return gender; }
+            set { gender = value; }
         }
         public double Balance
         {
@@ -111,7 +111,7 @@ namespace Project
                 command.Dispose();
                 return true;
             }
-         return false;
+            return false;
         }
         public bool Deposit(double val)
         {
@@ -128,13 +128,13 @@ namespace Project
             return false;
         }
 
-        public bool ChangePassword(string oldpass , string newpass)
+        public bool ChangePassword(string oldpass, string newpass)
         {
-         
             if (base.Password == oldpass)
             {
                 base.Password = newpass;
-                string query = "UPDATE Users SET Password = " + base.Password + " WHERE AccountNumber = " + Account_Number;
+
+                string query = "UPDATE Users SET Password = '" + base.Password + "' WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
                 command.ExecuteNonQuery();
                 command.Dispose();
@@ -145,7 +145,7 @@ namespace Project
 
         public bool AskLoan(double amount)
         {
-            if(amount * (double)(0.14) >= (Balance - Debt))
+            if (amount * (double)(0.14) >= (Balance - Debt))
             {
                 Debt += amount * (double)(0.14);
                 string query = "UPDATE tbl_accounts_data SET Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
@@ -156,17 +156,17 @@ namespace Project
             }
             return false;
         }
-        
+
         public bool Transfer(User user2, double val)
-        { 
-            if (user2.Account_number != 0 && val > 0)
+        {
+            if (user2.Account_Number != 0 && val > 0)
             {
                 double bal = Balance;
                 if (Withdraw(val))
                 {
                     user2.Deposit(val);
                     return true;
-                }  
+                }
             }
             return false;
         }

@@ -10,7 +10,7 @@ namespace Project
     internal class Person
     {
 
-        protected UInt32 Account_number = 0;
+        private UInt32 accNum;
         private string password = "";
         private int adminLvl;
         private SqlConnection con;
@@ -18,7 +18,7 @@ namespace Project
 
         public Person(UInt32 number, string password)
         {
-            Account_number = number;
+            accNum = number;
             this.password = password;
 
             string path = System.Environment.CurrentDirectory;
@@ -40,7 +40,7 @@ namespace Project
 
         public UInt32 Account_Number
         {
-            get { return Account_number;}
+            get { return accNum;}
         }
         public string Password
         {

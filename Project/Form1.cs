@@ -1,4 +1,4 @@
-﻿    using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +39,7 @@ namespace Project
 
         private void BtnChangePass_Click(object sender, EventArgs e)
         {
-            ChangePass chng = new ChangePass();
+            ChangePass chng = new ChangePass(user1.Account_Number, user1.Password);
             chng.Show();
         }
 
@@ -72,19 +72,26 @@ namespace Project
         }
 
         private void BtnDeposit_Click(object sender, EventArgs e)
-        {   
-           
-
-
-            double val = Double.Parse(textDeposit.Text);
-            Console.WriteLine(val);
-            if (user1.Deposit(val))
+        {
+            if (!string.IsNullOrEmpty(textDeposit.Text) && textDeposit.Text.All(char.IsNumber))
             {
-                dep_with_stat.Text = "Succesful transaction";
-                UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                double val = Double.Parse(textDeposit.Text);
+           
+                if (user1.Deposit(val))
+                {
+                    dep_with_stat.Text = "Succesful transaction";
+                    UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                    textDeposit.Clear();
+                }
+                else
+                {
+                    textDeposit.Clear();
+                    dep_with_stat.Text = "Please enter a valid amount";
+                }
             }
             else
             {
+                textDeposit.Clear();
                 dep_with_stat.Text = "Please enter a valid amount";
             }
                 
@@ -97,22 +104,42 @@ namespace Project
 
         private void BtnWithdraw_Click(object sender, EventArgs e)
         {
-            double val = Double.Parse(textWithdraw.Text);
-           
-            if (user1.Withdraw(val))
+            if (!string.IsNullOrEmpty(textWithdraw.Text) && textWithdraw.Text.All(char.IsNumber))
             {
-                dep_with_stat.Text = "Succesful transaction";
-                UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                double val = Double.Parse(textWithdraw.Text);
+                if (user1.Withdraw(val))
+                {
+                    dep_with_stat.Text = "Succesful transaction";
+                    UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                    textWithdraw.Clear();
+                }
+                else
+                {
+                    dep_with_stat.Text = "Please enter a valid amount";
+                    textWithdraw.Clear();
+                }
             }
             else
             {
                 dep_with_stat.Text = "Please enter a valid amount";
+                textWithdraw.Clear();
             }
+
         }
 
         private void dep_with_stat_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void transferstat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnTransfer_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

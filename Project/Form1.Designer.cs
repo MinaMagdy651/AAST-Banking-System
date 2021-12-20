@@ -140,6 +140,7 @@
             this.transferstat.Size = new System.Drawing.Size(81, 15);
             this.transferstat.TabIndex = 10;
             this.transferstat.Text = "transfer status";
+            this.transferstat.Click += new System.EventHandler(this.transferstat_Click);
             // 
             // AmountLab
             // 
@@ -229,6 +230,7 @@
             this.BtnTransfer.TabIndex = 19;
             this.BtnTransfer.Text = "Transfer";
             this.BtnTransfer.UseVisualStyleBackColor = false;
+            this.BtnTransfer.Click += new System.EventHandler(this.BtnTransfer_Click);
             // 
             // dep_with_stat
             // 
