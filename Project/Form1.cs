@@ -111,20 +111,18 @@ namespace Project
                 {
                     dep_with_stat.Text = "Succesful transaction";
                     UserBalanceLab.Text = Convert.ToString(user1.Balance);
-                    textWithdraw.Clear();
+                   
                 }
                 else
-                {
                     dep_with_stat.Text = "Please enter a valid amount";
-                    textWithdraw.Clear();
-                }
+       
             }
             else
             {
                 dep_with_stat.Text = "Please enter a valid amount";
-                textWithdraw.Clear();
+               
             }
-
+            textWithdraw.Clear();
         }
 
         private void dep_with_stat_Click(object sender, EventArgs e)
