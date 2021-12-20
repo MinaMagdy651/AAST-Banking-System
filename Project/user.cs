@@ -136,6 +136,8 @@ namespace Project
                 base.Password = newpass;
                 string query = "UPDATE Users SET Password = " + base.Password + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
                 return true;
             }
             return false;
@@ -148,6 +150,8 @@ namespace Project
                 Debt += amount * (double)(0.14);
                 string query = "UPDATE tbl_accounts_data SET Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
                 return true;
             }
             return false;

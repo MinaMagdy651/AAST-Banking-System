@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -72,7 +72,10 @@ namespace Project
         }
 
         private void BtnDeposit_Click(object sender, EventArgs e)
-        {
+        {   
+           
+
+
             double val = Double.Parse(textDeposit.Text);
             Console.WriteLine(val);
             if (user1.Deposit(val))
@@ -95,6 +98,7 @@ namespace Project
         private void BtnWithdraw_Click(object sender, EventArgs e)
         {
             double val = Double.Parse(textWithdraw.Text);
+           
             if (user1.Withdraw(val))
             {
                 dep_with_stat.Text = "Succesful transaction";
