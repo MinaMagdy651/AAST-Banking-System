@@ -81,6 +81,7 @@ namespace Project
                 else
                 {
                     AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
+                    dataReader.Close();
                     return true;
                 }
                 
