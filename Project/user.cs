@@ -184,11 +184,16 @@ namespace Project
 
         public bool AskLoan(double amount)
         {
-            if (amount * (double)(0.14) >= (Balance - Debt))
+            if (amount * (double)(0.14) <= (Balance - Debt))
             {
-                Debt += amount * (double)(0.14);
+                Debt += amount + amount * (double)(0.14);
+                Balance += amount;
                 string query = "UPDATE tbl_accounts_data SET Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+
+                query = "UPDATE tbl_accounts_data SET Debt = " + Balance + " WHERE AccountNumber = " + Account_Number;
+                command = new SqlCommand(query, connect);
+
                 command.ExecuteNonQuery();
                 command.Dispose();
                 return true;
@@ -201,6 +206,8 @@ namespace Project
             string query = "select * from tbl_accounts_data where AccountNumber = " + user2.Account_Number;
             SqlCommand command = new SqlCommand(query, connect);
             SqlDataReader dataReader = command.ExecuteReader();
+
+            //datareader has to be closed twice in case of success transfer
             if (dataReader.Read() && val > 0)
             {
                 dataReader.Close();
@@ -210,6 +217,7 @@ namespace Project
                     return true;
                 }
             }
+            dataReader.Close();
             return false;
         }
     }

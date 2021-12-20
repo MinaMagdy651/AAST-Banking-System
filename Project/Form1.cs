@@ -157,9 +157,7 @@ namespace Project
                     transferstat.Text = "Insufficient or account doesn't exist";
                     TxtTranUser.Clear();
                     TxtTranAmount.Clear();
-
                 }
-
             }
             else
             {
@@ -172,7 +170,26 @@ namespace Project
 
         private void btn_askLoan_Click(object sender, EventArgs e)
         {
-
+            if(!string.IsNullOrEmpty(txtbox_askLoan.Text) && txtbox_askLoan.Text.All(char.IsNumber))
+            {
+                double val = Double.Parse(txtbox_askLoan.Text);
+                if (user1.AskLoan(val))
+                {
+                    UserBalanceLab.Text = Convert.ToString(user1.Balance);
+                    lbl_debt.Text = Convert.ToString(user1.Debt);
+                    askLoan_stat.Text = string.Format("Succesfully added ${0} to your account", val);
+                }
+                else
+                {
+                    askLoan_stat.Text = "You are not eligble for this loan";
+                    txtbox_askLoan.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pleas enter a valid amount");
+                txtbox_askLoan.Clear();
+            }
         }
     }
 }

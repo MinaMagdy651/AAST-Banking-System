@@ -288,9 +288,8 @@
             this.askLoan_stat.AutoSize = true;
             this.askLoan_stat.Location = new System.Drawing.Point(469, 282);
             this.askLoan_stat.Name = "askLoan_stat";
-            this.askLoan_stat.Size = new System.Drawing.Size(55, 15);
+            this.askLoan_stat.Size = new System.Drawing.Size(0, 15);
             this.askLoan_stat.TabIndex = 25;
-            this.askLoan_stat.Text = "Loan stat";
             this.askLoan_stat.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_debt
@@ -345,7 +344,7 @@
             this.Controls.Add(this.Message1Lab);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "User Form";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
