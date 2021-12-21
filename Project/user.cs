@@ -222,6 +222,8 @@ namespace Project
         }
         public bool paydebt(double val)
         {
+            if (debt == 0)
+                return false;
             if(val > 0 && Balance >= val && debt >= val)
             {
                 Balance -= val;
