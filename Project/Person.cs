@@ -14,7 +14,6 @@ namespace Project
         private string password = "";
         private int adminLvl;
         private SqlConnection con;
-        
 
         public Person(UInt32 number, string password)
         {
@@ -25,6 +24,22 @@ namespace Project
             string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
 
 
+            con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path2 + ";Integrated Security=True");
+            try
+            {
+                con.Open();
+            }
+            catch (SqlException)
+            {
+                Console.WriteLine("Error while connection to SQL server");
+            }
+
+        }
+        public Person(UInt32 number)
+        {
+            accNum = number;
+            string path = System.Environment.CurrentDirectory;
+            string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
             con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path2 + ";Integrated Security=True");
             try
             {
@@ -66,6 +81,7 @@ namespace Project
                 else
                 {
                     AdminLvl = Convert.ToInt32(dataReader.GetValue(2));
+                    dataReader.Close();
                     return true;
                 }
                 
@@ -74,6 +90,7 @@ namespace Project
             {
                 MessageBox.Show("Account Number not found");
             }
+            dataReader.Close();
             return false;
         }
         
