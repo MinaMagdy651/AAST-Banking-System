@@ -17,6 +17,7 @@ namespace Project
         double balance;
         private double debt;
         private char gender;
+        private bool found = false; 
 
         private SqlConnection connect;
 
@@ -90,6 +91,7 @@ namespace Project
                 balance = Double.Parse("" + dataReader.GetValue(6));
                 debt = Double.Parse("" + dataReader.GetValue(7));
                 gender = Convert.ToChar("" + dataReader.GetValue(8));
+                found = true;
             }
             else
             {
@@ -99,6 +101,10 @@ namespace Project
             dataReader.Close();
         }
 
+        public bool Found
+        {
+            get { return found; }
+        }
         public string Name
         {
             get { return name; }
@@ -247,19 +253,6 @@ namespace Project
             return false;
         }
 
-        public bool UserFound(UInt32 accountNumber)
-        {
-            string query = "select * from tbl_accounts_data where AccountNumber = " + accountNumber;
-            SqlCommand command = new SqlCommand(query, connect);
-            SqlDataReader dataReader = command.ExecuteReader();
-
-            if (dataReader.Read())
-            {
-                dataReader.Close();
-                return true;
-            }
-            dataReader.Close();
-            return false;
-        }
+        
     }
 }
