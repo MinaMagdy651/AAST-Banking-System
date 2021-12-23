@@ -197,7 +197,13 @@ namespace Project
             if(!string.IsNullOrEmpty(payDebt.Text) && payDebt.Text.All(char.IsNumber))
             {
                 double val = Double.Parse(payDebt.Text);
-                if (user1.paydebt(val) )
+                if(user1.Debt == 0)
+                {
+                    label4.Text = "Your debt amout is 0$";
+                    payDebt.Clear();
+                }
+
+                else if (user1.paydebt(val) )
                 {
                     UserBalanceLab.Text = Convert.ToString(user1.Balance);
                     lbl_debt.Text = Convert.ToString(user1.Debt);
@@ -206,14 +212,14 @@ namespace Project
                 else
                 {
                     label4.Text = "Please Enter valid amout";
-                    txtbox_askLoan.Clear();
+                    payDebt.Clear();
                 }
            
             }
             else
             {
                 label4.Text = "Please Enter valid amout";
-                txtbox_askLoan.Clear();
+                payDebt.Clear();
             }
         }
     }
