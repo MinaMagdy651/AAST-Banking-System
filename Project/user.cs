@@ -21,45 +21,6 @@ namespace Project
         private SqlConnection connect;
 
 
-
-        public User(UInt32 accountNumber, string pass) : base(accountNumber, pass)
-        {
-            string path = System.Environment.CurrentDirectory;
-            string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
-
-
-            connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path2 + ";Integrated Security=True");
-            try
-            {
-                connect.Open();
-            }
-            catch (SqlException)
-            {
-                Console.WriteLine("Error while connection to SQL server");
-            }
-
-            string query = "select * from tbl_accounts_data where AccountNumber = " + Account_Number;
-
-            SqlCommand command = new SqlCommand(query, connect);
-            SqlDataReader dataReader = command.ExecuteReader();
-            if (dataReader.Read())
-            {
-                name = (string)dataReader.GetValue(1);
-                address = (string)(dataReader.GetValue(2));
-                phone = (string)(dataReader.GetValue(3));
-                email = (string)(dataReader.GetValue(4));
-                AccountType = Int32.Parse("" + dataReader.GetValue(5));
-                balance = Double.Parse("" + dataReader.GetValue(6));
-                debt = Double.Parse("" + dataReader.GetValue(7));
-                gender = Convert.ToChar("" + dataReader.GetValue(8));
-            }
-            else
-            {
-                Console.WriteLine("Error while parsing data from SQL tables");
-            }
-            command.Dispose();
-            dataReader.Close();
-        }
         public User(UInt32 accountNumber) : base(accountNumber)
         {
             string path = System.Environment.CurrentDirectory;
