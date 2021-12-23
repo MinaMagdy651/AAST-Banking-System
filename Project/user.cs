@@ -17,6 +17,7 @@ namespace Project
         double balance;
         private double debt;
         private char gender;
+        private bool found = false; 
 
         private SqlConnection connect;
 
@@ -51,6 +52,7 @@ namespace Project
                 balance = Double.Parse("" + dataReader.GetValue(6));
                 debt = Double.Parse("" + dataReader.GetValue(7));
                 gender = Convert.ToChar("" + dataReader.GetValue(8));
+                found = true;
             }
             else
             {
@@ -60,6 +62,10 @@ namespace Project
             dataReader.Close();
         }
 
+        public bool Found
+        {
+            get { return found; }
+        }
         public string Name
         {
             get { return name; }
@@ -209,5 +215,7 @@ namespace Project
             
             return false;
         }
+
+        
     }
 }
