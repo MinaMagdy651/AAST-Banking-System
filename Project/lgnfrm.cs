@@ -43,7 +43,7 @@ namespace Project
                     if (p.AdminLvl == 0)
                     {
                         this.Hide();
-                        Form1 frm = new Form1(p.Account_Number, p.Password);
+                        Form1 frm = new Form1(p.Account_Number);
                         frm.Closed += (s, args) => this.Close();
                         frm.Show();
                     }

@@ -17,9 +17,9 @@ namespace Project
         {
             InitializeComponent();
         }
-        public Form1(UInt32 num, string pass)
+        public Form1(UInt32 num)
         {
-            user1 = new User(num, pass);
+            user1 = new User(num);
             InitializeComponent();
             UserNameLab.Text = user1.Name;
             UserBalanceLab.Text = Convert.ToString(user1.Balance);
