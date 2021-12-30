@@ -19,7 +19,7 @@ namespace Project
         }
         public TellerForm(UInt32 Accountnumber,string pass)
         {
-            Teller = new teller(Accountnumber);
+            Teller = new teller();
             InitializeComponent();
 
         }
@@ -96,6 +96,15 @@ namespace Project
 
         private void TellerForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AddUser adduser = new AddUser();
+            adduser.Closed += (s, args) => this.Close();
+            adduser.Show();
 
         }
     }

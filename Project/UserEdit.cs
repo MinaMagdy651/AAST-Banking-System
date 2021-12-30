@@ -21,7 +21,7 @@ namespace Project
         public UserEdit(UInt32 accountnumber)
         {
             user1 = new User(accountnumber);
-            Teller = new teller(accountnumber);
+            Teller = new teller();
             InitializeComponent();
             name.Text = user1.Name;
             balance.Text = Convert.ToString(user1.Balance);

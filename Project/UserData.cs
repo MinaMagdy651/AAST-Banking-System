@@ -38,5 +38,10 @@ namespace Project
             tellerform.Closed += (s, args) => this.Close();
             tellerform.Show();
         }
+
+        private void UserData_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
