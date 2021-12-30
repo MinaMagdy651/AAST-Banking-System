@@ -206,6 +206,7 @@ namespace Project
                 double exceed = val - debt;
                 Balance -= debt;
                 Balance += exceed;
+                debt = 0;
                 string query = "UPDATE tbl_accounts_data SET  Balance = " + Balance + " , Debt = " + 0 + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
                 command.ExecuteNonQuery();
