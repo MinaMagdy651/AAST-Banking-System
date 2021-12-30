@@ -12,14 +12,14 @@ namespace Project
 {
     public partial class TellerForm : Form
     {
-        teller Teller;
+        teller Teller ;
         public TellerForm()
         {
             InitializeComponent();
         }
-        public TellerForm(UInt32 Accountnumber, string pass)
+        public TellerForm(UInt32 Accountnumber,string pass)
         {
-            Teller = new teller(Accountnumber);
+            Teller = new teller();
             InitializeComponent();
 
         }
@@ -83,7 +83,7 @@ namespace Project
 
         private void AccNum_TextChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -101,26 +101,11 @@ namespace Project
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Teller.adddUser();
-        }
+            this.Hide();
+            AddUser adduser = new AddUser();
+            adduser.Closed += (s, args) => this.Close();
+            adduser.Show();
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-           
-                if (!string.IsNullOrEmpty(AccNum.Text) && AccNum.Text.All(char.IsNumber))
-                {
-                    UInt32 accountnumber = Convert.ToUInt32(AccNum.Text);
-                    if (Teller.deleteData(accountnumber))
-
-                        label2.Text = "Account has been deleted..";
-
-                    else
-                        label2.Text = "Account number is not found....";
-                }
-                else
-                    label2.Text = "The entered data is invalid..";
-            
-           
         }
     }
 }
