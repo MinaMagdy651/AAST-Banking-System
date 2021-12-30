@@ -19,7 +19,7 @@ namespace Project
         }
         public ChangePass(UInt32 accNumber, string pass)
         {
-            u1 = new User(accNumber, pass);
+            u1 = new User(accNumber);
             InitializeComponent();
         }
 

@@ -37,20 +37,20 @@ namespace Project
             {
                 Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
                 passwordtxt.Clear();
-    
+        
                 if (p.loginCheck() )
                 {
                     if (p.AdminLvl == 0)
                     {
                         this.Hide();
-                        Form1 frm = new Form1(p.Account_Number, p.Password);
+                        Form1 frm = new Form1(p.Account_Number);
                         frm.Closed += (s, args) => this.Close();
                         frm.Show();
                     }
                     else
                     {
                         this.Hide();
-                        TellerForm frm2 = new TellerForm();
+                        TellerForm frm2 = new TellerForm(p.Account_Number , p.Password);
                         frm2.Closed += (s, args) => this.Close();
                         frm2.Show();
                     }

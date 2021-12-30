@@ -18,7 +18,7 @@ namespace Project
         public Person(UInt32 number, string password)
         {
             accNum = number;
-            this.password = password;
+            Password = password;
 
             string path = System.Environment.CurrentDirectory;
             string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
@@ -49,6 +49,12 @@ namespace Project
             {
                 Console.WriteLine("Error while connection to SQL server");
             }
+            string query = "select * from Users where AccountNumber = " + Account_Number;
+            SqlCommand command = new SqlCommand(query, con);
+            SqlDataReader dataReader = command.ExecuteReader();
+            if (dataReader.Read())
+                Password = (string)dataReader.GetValue(1);
+            dataReader.Close(); 
         }
 
 
