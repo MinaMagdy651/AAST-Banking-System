@@ -11,7 +11,7 @@ namespace Project
     {
         private SqlConnection connect2;
 
-        public teller (UInt32 accountNumber, string pass) : base(accountNumber, pass)
+        public teller (UInt32 accountNumber) : base(accountNumber)
         {
             string path = System.Environment.CurrentDirectory;
             string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
@@ -41,25 +41,17 @@ namespace Project
 
         public bool EditData(UInt32 account_number, string name, string email, string phone_number, string address)
         {
-            User user1 = new User(account_number);
-            if (user1.Found)
-            {
-                user1.Name = name;  
-                user1.Email = email;    
-                user1.Phone= phone_number;  
-                user1.Address = address;    
+            
+               string query2 = "UPDATE tbl_accounts_data SET Phone = '" + phone_number + "',   Email  = '" + email + "' , Address = '" +address +"'  WHERE AccountNumber = " + Account_Number;
 
-                string query = "UPDATE tbl_accounts_data Name = '" + user1.Name + "' WHERE AccountNumber = " + Account_Number;
-                _ = "UPDATE tbl_accounts_data Phone = '" + user1.Phone + "' WHERE AccountNumber = " + Account_Number;
-                _ = "UPDATE tbl_accounts_data Address = '" + user1.Address + "' WHERE AccountNumber = " + Account_Number;
-                _ = "UPDATE tbl_accounts_data Email = '" + user1.Email + "' WHERE AccountNumber = " + Account_Number;
-                SqlCommand command = new SqlCommand(query, connect2);
+                string query = "UPDATE tbl_accounts_data Phone = '" + phone_number + "' WHERE AccountNumber = " + Account_Number;
+                _ = "UPDATE tbl_accounts_data Address = '" + address + "' WHERE AccountNumber = " + Account_Number;
+                _ = "UPDATE tbl_accounts_data Email = '" + email + "' WHERE AccountNumber = " + Account_Number;
+                SqlCommand command = new SqlCommand(query2, connect2);
                 command.ExecuteNonQuery();
                 command.Dispose();
 
-                return true;
-            }
-            return false;
+            return true;
         }
 
 
