@@ -62,6 +62,24 @@ namespace Project
             return false;
         }
 
+        public bool deleteData(UInt32 account_number)
+        {
+            User user1 = new User(account_number);
+            if (user1.Found)
+            {
+                string query = "DELETE FROM tbl_accounts_data WHERE AccountNumber = " + Account_Number;
+                
+                SqlCommand command = new SqlCommand(query, connect2);
+                string query2 = "DELETE FROM USERS WHERE AccountNumber = " + Account_Number;
+                SqlCommand command2 = new SqlCommand(query2, connect2);
+                command.ExecuteNonQuery();
+                command.Dispose();
+
+                return true;
+            }
+            return false;
+        }
+
 
 
     }
