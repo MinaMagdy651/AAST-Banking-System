@@ -71,8 +71,47 @@ namespace Project
             }
             return false;
         }
+        public void adddUser(string name, double balance, string email, string phone_number, string address, char gender)
+        {
+            string query = "select max(AccountNumber) from tbl_accounts_data";
+            SqlCommand Command = new SqlCommand(query, connect2);
+            SqlDataReader DataReader = Command.ExecuteReader();
+
+            UInt32 new_accNumber = 0;
+            if(DataReader.Read())
+                new_accNumber =  UInt32.Parse("" + DataReader.GetValue(0)) + 1;
+
+            string password = passwordGen();
+            DataReader.Close();
+            Command.Dispose();
+
+            string query2 = "INSERT INTO Users (AccountNumber, Password, AdminLvL) VALUES(@AccountNumber, @Password, '0')";
+            SqlCommand command2 = new SqlCommand(query2, connect2);
+            command2.Parameters.AddWithValue("@AccountNumber", new_accNumber);
+            command2.Parameters.AddWithValue("@Password", password);
+            command2.ExecuteNonQuery();
+
+            string query3 = "INSERT INTO tbl_accounts_data (AccountNumber, Name, Address, Phone, Email, AccountType, Balance, Debt, Gender) VALUES(@AccountNumber, @Name, @Address, @Phone, @Email, '0', @Balance, '0', @Gender)";
+            SqlCommand command3 = new SqlCommand(query3, connect2);
+            command3.Parameters.AddWithValue("@AccountNumber", new_accNumber);
+            command3.Parameters.AddWithValue("@Name", name);
+            command3.Parameters.AddWithValue("@Address", address);
+            command3.Parameters.AddWithValue("@Phone", phone_number);
+            command3.Parameters.AddWithValue("@Email", email);
+            command3.Parameters.AddWithValue("@Balance", balance);
+            command3.Parameters.AddWithValue("@Gender", gender);
+            command3.ExecuteNonQuery();
 
 
+
+        }
+
+        private string passwordGen()
+        {
+            Random generator = new Random();
+            string password = generator.Next(100000, 1000000).ToString();
+            return password;
+        }
 
     }
 }
