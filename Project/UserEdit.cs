@@ -61,5 +61,10 @@ namespace Project
                 
             }
         }
+
+        private void UserEdit_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
