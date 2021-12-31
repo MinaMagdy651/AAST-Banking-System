@@ -107,5 +107,25 @@ namespace Project
             adduser.Show();
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(AccNum.Text) && AccNum.Text.All(char.IsNumber))
+            {
+                UInt32 accountnumber = Convert.ToUInt32(AccNum.Text);
+                Teller = new teller();
+
+                if (Teller.deleteData(accountnumber))
+                    label2.Text = "Account has been deleted";
+                else
+
+                    label2.Text = "Account number not found";
+            }
+            else
+            {
+                label2.Text = "The entered data is invalid..";
+            }
+        }
     }
 }

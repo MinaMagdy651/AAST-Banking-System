@@ -45,9 +45,7 @@ namespace Project
             
                string query2 = "UPDATE tbl_accounts_data SET Phone = '" + phone_number + "',   Email  = '" + email + "' , Address = '" +address +"'  WHERE AccountNumber = " + account_number;
 
-            string query = "UPDATE tbl_accounts_data Phone = '" + phone_number + "' WHERE AccountNumber = " + account_number;
-            _ = "UPDATE tbl_accounts_data Address = '" + address + "' WHERE AccountNumber = " + account_number;
-            _ = "UPDATE tbl_accounts_data Email = '" + email + "' WHERE AccountNumber = " + account_number;
+            
                 SqlCommand command = new SqlCommand(query2, connect2);
                 command.ExecuteNonQuery();
                 command.Dispose();
@@ -58,16 +56,17 @@ namespace Project
         public bool deleteData(UInt32 account_number)
         {
             User user1 = new User(account_number);
-            if (user1.Found)
+            if (user1.Found && user1.AdminLvl != 1)
             {
                 string query = "DELETE FROM tbl_accounts_data WHERE AccountNumber = " + account_number;
 
-
                 SqlCommand command = new SqlCommand(query, connect2);
-                string query2 = "DELETE FROM USERS WHERE AccountNumber = " + account_number;
-                SqlCommand command2 = new SqlCommand(query2, connect2);
+                string query2 = "DELETE FROM Users WHERE AccountNumber = " + account_number;
                 command.ExecuteNonQuery();
                 command.Dispose();
+                SqlCommand command2 = new SqlCommand(query2, connect2);
+                command2.ExecuteNonQuery();
+                command2.Dispose();
 
                 return true;
             }

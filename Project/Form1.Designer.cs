@@ -167,6 +167,7 @@
             this.textDeposit.Location = new System.Drawing.Point(120, 138);
             this.textDeposit.Multiline = true;
             this.textDeposit.Name = "textDeposit";
+            this.textDeposit.PlaceholderText = "Enter the amount..";
             this.textDeposit.Size = new System.Drawing.Size(267, 35);
             this.textDeposit.TabIndex = 13;
             // 
@@ -186,6 +187,7 @@
             this.textWithdraw.Location = new System.Drawing.Point(120, 200);
             this.textWithdraw.Multiline = true;
             this.textWithdraw.Name = "textWithdraw";
+            this.textWithdraw.PlaceholderText = "Enter the amount..";
             this.textWithdraw.Size = new System.Drawing.Size(267, 35);
             this.textWithdraw.TabIndex = 15;
             // 
@@ -205,6 +207,7 @@
             this.TxtTranUser.Location = new System.Drawing.Point(437, 274);
             this.TxtTranUser.Multiline = true;
             this.TxtTranUser.Name = "TxtTranUser";
+            this.TxtTranUser.PlaceholderText = "Account Number..";
             this.TxtTranUser.Size = new System.Drawing.Size(267, 35);
             this.TxtTranUser.TabIndex = 17;
             // 
@@ -213,6 +216,7 @@
             this.TxtTranAmount.Location = new System.Drawing.Point(125, 271);
             this.TxtTranAmount.Multiline = true;
             this.TxtTranAmount.Name = "TxtTranAmount";
+            this.TxtTranAmount.PlaceholderText = "Enter the amount..";
             this.TxtTranAmount.Size = new System.Drawing.Size(267, 35);
             this.TxtTranAmount.TabIndex = 18;
             // 
@@ -262,6 +266,7 @@
             this.txtbox_askLoan.Location = new System.Drawing.Point(120, 367);
             this.txtbox_askLoan.Multiline = true;
             this.txtbox_askLoan.Name = "txtbox_askLoan";
+            this.txtbox_askLoan.PlaceholderText = "Enter the amount..";
             this.txtbox_askLoan.Size = new System.Drawing.Size(267, 35);
             this.txtbox_askLoan.TabIndex = 23;
             // 
@@ -317,6 +322,7 @@
             // 
             this.payDebt.Location = new System.Drawing.Point(120, 447);
             this.payDebt.Name = "payDebt";
+            this.payDebt.PlaceholderText = "Enter the amount..";
             this.payDebt.Size = new System.Drawing.Size(272, 27);
             this.payDebt.TabIndex = 29;
             // 
