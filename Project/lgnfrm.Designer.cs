@@ -60,8 +60,8 @@
             this.usernametxt.Location = new System.Drawing.Point(165, 29);
             this.usernametxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.usernametxt.Name = "usernametxt";
-            this.usernametxt.PlaceholderText = "Enter your account number ";
-            this.usernametxt.Size = new System.Drawing.Size(228, 27);
+            this.usernametxt.PlaceholderText = "Enter account number ";
+            this.usernametxt.Size = new System.Drawing.Size(168, 27);
             this.usernametxt.TabIndex = 2;
             // 
             // passwordtxt
@@ -69,7 +69,7 @@
             this.passwordtxt.Location = new System.Drawing.Point(165, 100);
             this.passwordtxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordtxt.Name = "passwordtxt";
-            this.passwordtxt.PlaceholderText = "Enter your password...";
+            this.passwordtxt.PlaceholderText = "Enter  password";
             this.passwordtxt.Size = new System.Drawing.Size(168, 27);
             this.passwordtxt.TabIndex = 3;
             this.passwordtxt.UseSystemPasswordChar = true;
