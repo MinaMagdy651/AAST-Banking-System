@@ -57,6 +57,7 @@ namespace Project
             }
         }
 
+
         private void btn_add_Click(object sender, EventArgs e)
         {
             try
@@ -67,6 +68,7 @@ namespace Project
                 string address = txt_address.Text;
                 string phone = txt_Phone.Text;
                 double balance = Convert.ToDouble(txt_balance.Text);
+                int accountType = 0;
  
 
                 if (chck_male.Checked)
@@ -81,7 +83,16 @@ namespace Project
                 {
                     throw new Exception();
                 }
-                Teller.adddUser(name, balance, email, phone, address, gender);
+
+                if (chck_Saving.Checked)
+                {
+                    accountType = 0;
+                }
+                else if (chck_Fixed.Checked)
+                {
+                    accountType = 1;
+                }
+                Teller.adddUser(name, balance, email, phone, address, gender, accountType);
             }
            
             catch
@@ -97,6 +108,23 @@ namespace Project
                 
             }
 
+        }
+
+
+        private void chck_Fixed_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chck_Saving.Checked)
+            {
+                chck_Fixed.Checked = false;
+            }
+        }
+
+        private void chck_Saving_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (chck_Fixed.Checked)
+            {
+                chck_Saving.Checked = false;
+            }
         }
     }
 }

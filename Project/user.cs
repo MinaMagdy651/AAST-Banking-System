@@ -217,6 +217,10 @@ namespace Project
             return false;
         }
 
+        public virtual double GetBalance()
+        {
+            return 0;
+        }
         
     }
 }

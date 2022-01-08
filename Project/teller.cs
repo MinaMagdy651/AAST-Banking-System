@@ -72,7 +72,7 @@ namespace Project
             }
             return false;
         }
-        public void adddUser(string name, double balance, string email, string phone_number, string address, char gender)
+        public void adddUser(string name, double balance, string email, string phone_number, string address, char gender, int accountType)
         {
             string query = "select max(AccountNumber) from tbl_accounts_data";
             SqlCommand Command = new SqlCommand(query, connect2);
@@ -93,7 +93,7 @@ namespace Project
             command2.ExecuteNonQuery();
 
 
-            string query3 = "INSERT INTO tbl_accounts_data (AccountNumber, Name, Address, Phone, Email, AccountType, Balance, Debt, Gender) VALUES(@AccountNumber, @Name, @Address, @Phone, @Email, '0', @Balance, '0', @Gender)";
+            string query3 = "INSERT INTO tbl_accounts_data (AccountNumber, Name, Address, Phone, Email, AccountType, Balance, Debt, Gender) VALUES(@AccountNumber, @Name, @Address, @Phone, @Email, @AccountType, @Balance, '0', @Gender)";
             SqlCommand command3 = new SqlCommand(query3, connect2);
             command3.Parameters.AddWithValue("@AccountNumber", new_accNumber);
             command3.Parameters.AddWithValue("@Name", name);
@@ -102,6 +102,8 @@ namespace Project
             command3.Parameters.AddWithValue("@Email", email);
             command3.Parameters.AddWithValue("@Balance", balance);
             command3.Parameters.AddWithValue("@Gender", gender);
+            command3.Parameters.AddWithValue("@AccountType", accountType);
+
             command3.ExecuteNonQuery();
             string res = string.Format("\tAccount Created Successfully! \n\nAccount Number: {0}\nPassword: {1}", new_accNumber, password);
             MessageBox.Show(res);

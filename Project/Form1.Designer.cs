@@ -58,6 +58,9 @@
             this.payDebt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lbl_accTyoe = new System.Windows.Forms.Label();
+            this.lbl_accType = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Message1Lab
@@ -68,7 +71,6 @@
             this.Message1Lab.Size = new System.Drawing.Size(52, 20);
             this.Message1Lab.TabIndex = 0;
             this.Message1Lab.Text = "Hello, ";
-            this.Message1Lab.Click += new System.EventHandler(this.label1_Click);
             // 
             // BalanceLab
             // 
@@ -133,7 +135,6 @@
             this.DateLab.Size = new System.Drawing.Size(52, 20);
             this.DateLab.TabIndex = 8;
             this.DateLab.Text = "Date : ";
-            this.DateLab.Click += new System.EventHandler(this.DateLab_Click);
             // 
             // transferstat
             // 
@@ -142,7 +143,6 @@
             this.transferstat.Name = "transferstat";
             this.transferstat.Size = new System.Drawing.Size(0, 20);
             this.transferstat.TabIndex = 10;
-            this.transferstat.Click += new System.EventHandler(this.transferstat_Click);
             // 
             // AmountLab
             // 
@@ -238,7 +238,6 @@
             this.dep_with_stat.Name = "dep_with_stat";
             this.dep_with_stat.Size = new System.Drawing.Size(0, 20);
             this.dep_with_stat.TabIndex = 20;
-            this.dep_with_stat.Click += new System.EventHandler(this.dep_with_stat_Click);
             // 
             // BtnChangePass
             // 
@@ -259,7 +258,6 @@
             this.label1.Size = new System.Drawing.Size(93, 20);
             this.label1.TabIndex = 22;
             this.label1.Text = "Ask For Loan";
-            this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
             // txtbox_askLoan
             // 
@@ -288,7 +286,6 @@
             this.askLoan_stat.Name = "askLoan_stat";
             this.askLoan_stat.Size = new System.Drawing.Size(0, 20);
             this.askLoan_stat.TabIndex = 25;
-            this.askLoan_stat.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbl_debt
             // 
@@ -297,7 +294,6 @@
             this.lbl_debt.Name = "lbl_debt";
             this.lbl_debt.Size = new System.Drawing.Size(0, 20);
             this.lbl_debt.TabIndex = 27;
-            this.lbl_debt.Click += new System.EventHandler(this.label2_Click_1);
             // 
             // label3
             // 
@@ -307,7 +303,6 @@
             this.label3.Size = new System.Drawing.Size(45, 20);
             this.label3.TabIndex = 26;
             this.label3.Text = "Debt:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
@@ -346,12 +341,41 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(337, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 20);
+            this.label5.TabIndex = 32;
+            this.label5.Text = "Account Type:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lbl_accTyoe
+            // 
+            this.lbl_accTyoe.AutoSize = true;
+            this.lbl_accTyoe.Location = new System.Drawing.Point(444, 77);
+            this.lbl_accTyoe.Name = "lbl_accTyoe";
+            this.lbl_accTyoe.Size = new System.Drawing.Size(0, 20);
+            this.lbl_accTyoe.TabIndex = 33;
+            // 
+            // lbl_accType
+            // 
+            this.lbl_accType.AutoSize = true;
+            this.lbl_accType.Location = new System.Drawing.Point(450, 77);
+            this.lbl_accType.Name = "lbl_accType";
+            this.lbl_accType.Size = new System.Drawing.Size(0, 20);
+            this.lbl_accType.TabIndex = 34;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(916, 526);
+            this.Controls.Add(this.lbl_accType);
+            this.Controls.Add(this.lbl_accTyoe);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.payDebt);
@@ -424,5 +448,8 @@
         private TextBox payDebt;
         private Label label4;
         private Button button1;
+        private Label label5;
+        private Label lbl_accTyoe;
+        private Label lbl_accType;
     }
 }
