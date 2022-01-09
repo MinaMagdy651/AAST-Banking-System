@@ -8,7 +8,6 @@ namespace Project
 {
     internal class FixedAccount : User
     {
-        int IR = 7;
 
         public FixedAccount(UInt32 accNum) : base(accNum)
         {
@@ -16,7 +15,11 @@ namespace Project
         }
         public override double GetBalance()
         {
-            return Balance + Balance * (IR/100);
+            return Balance;
+        }
+        public override string GetType()
+        {
+            return "Fixed";
         }
 
     }

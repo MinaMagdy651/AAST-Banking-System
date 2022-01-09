@@ -221,6 +221,10 @@ namespace Project
         {
             return 0;
         }
+        public virtual string GetType()
+        {
+            return "";
+        }
         
     }
 }

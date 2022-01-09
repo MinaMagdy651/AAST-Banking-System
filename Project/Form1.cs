@@ -13,6 +13,7 @@ namespace Project
     public partial class Form1 : Form
     {
         User user1;
+
         public Form1()
         {
             InitializeComponent();
@@ -20,10 +21,21 @@ namespace Project
         public Form1(UInt32 num)
         {
             user1 = new User(num);
+            if (user1.AccountType == 1)
+            {
+                user1 = new FixedAccount(num);
+            }
+            else
+            {
+                user1 = new SavingAccount(num);
+            }
+            
             InitializeComponent();
             UserNameLab.Text = user1.Name;
             UserBalanceLab.Text = Convert.ToString(user1.Balance);
             lbl_debt.Text = Convert.ToString(user1.Debt);
+            lbl_expBal.Text = Convert.ToString(user1.GetBalance());
+            lbl_accType.Text = user1.GetType();
         }
         
         
@@ -74,6 +86,7 @@ namespace Project
                     textDeposit.Clear();
                     dep_with_stat.Text = "Please enter a valid amount";
                 }
+                lbl_expBal.Text = Convert.ToString(user1.GetBalance());
             }
             catch (Exception ex)
             {
@@ -105,6 +118,7 @@ namespace Project
                     dep_with_stat.Text = "Please enter a valid amount";
                 }
                 textWithdraw.Clear();
+                lbl_expBal.Text = Convert.ToString(user1.GetBalance());
             }
             catch (Exception ex)
             {
@@ -138,6 +152,7 @@ namespace Project
                         transferstat.Text = "Insufficient or account doesn't exist";
                         TxtTranUser.Clear();
                         TxtTranAmount.Clear();
+                        lbl_expBal.Text = Convert.ToString(user1.GetBalance());
                     }
                 }
                 else
@@ -173,6 +188,7 @@ namespace Project
                     {
                         askLoan_stat.Text = "You are not eligble for this loan";
                         txtbox_askLoan.Clear();
+                        lbl_expBal.Text = Convert.ToString(user1.GetBalance());
                     }
                 }
                 else
@@ -220,6 +236,7 @@ namespace Project
                     label4.Text = "Please Enter valid amout";
                     payDebt.Clear();
                 }
+                lbl_expBal.Text = Convert.ToString(user1.GetBalance());
             }
             catch(Exception)
             {

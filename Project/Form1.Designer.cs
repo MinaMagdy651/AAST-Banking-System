@@ -58,8 +58,9 @@
             this.payDebt = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbl_expBal = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.lbl_accTyoe = new System.Windows.Forms.Label();
             this.lbl_accType = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -341,31 +342,40 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(536, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(133, 20);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Expected Balance: ";
+            // 
+            // lbl_expBal
+            // 
+            this.lbl_expBal.AutoSize = true;
+            this.lbl_expBal.Location = new System.Drawing.Point(675, 77);
+            this.lbl_expBal.Name = "lbl_expBal";
+            this.lbl_expBal.Size = new System.Drawing.Size(0, 20);
+            this.lbl_expBal.TabIndex = 36;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 77);
+            this.label5.Location = new System.Drawing.Point(320, 77);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
-            this.label5.TabIndex = 32;
+            this.label5.TabIndex = 37;
             this.label5.Text = "Account Type:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // lbl_accTyoe
-            // 
-            this.lbl_accTyoe.AutoSize = true;
-            this.lbl_accTyoe.Location = new System.Drawing.Point(444, 77);
-            this.lbl_accTyoe.Name = "lbl_accTyoe";
-            this.lbl_accTyoe.Size = new System.Drawing.Size(0, 20);
-            this.lbl_accTyoe.TabIndex = 33;
             // 
             // lbl_accType
             // 
             this.lbl_accType.AutoSize = true;
-            this.lbl_accType.Location = new System.Drawing.Point(450, 77);
+            this.lbl_accType.Location = new System.Drawing.Point(427, 77);
             this.lbl_accType.Name = "lbl_accType";
             this.lbl_accType.Size = new System.Drawing.Size(0, 20);
-            this.lbl_accType.TabIndex = 34;
+            this.lbl_accType.TabIndex = 38;
+            this.lbl_accType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
@@ -374,8 +384,9 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(916, 526);
             this.Controls.Add(this.lbl_accType);
-            this.Controls.Add(this.lbl_accTyoe);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbl_expBal);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.payDebt);
@@ -448,8 +459,9 @@
         private TextBox payDebt;
         private Label label4;
         private Button button1;
+        private Label label6;
+        private Label lbl_expBal;
         private Label label5;
-        private Label lbl_accTyoe;
         private Label lbl_accType;
     }
 }
