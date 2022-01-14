@@ -80,7 +80,7 @@ namespace Project
                 textDeposit.Clear();
                 lbl_expBal.Text = Convert.ToString(user1.GetBalance());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 textDeposit.Clear();
                 dep_with_stat.Text = "Please enter a valid amount";
@@ -107,7 +107,7 @@ namespace Project
                 textWithdraw.Clear();
                 lbl_expBal.Text = Convert.ToString(user1.GetBalance());
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 dep_with_stat.Text = "Please enter a valid amount";
                 textWithdraw.Clear();
@@ -140,7 +140,7 @@ namespace Project
                     lbl_expBal.Text = Convert.ToString(user1.GetBalance());
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 TxtTranUser.Clear();
                 TxtTranAmount.Clear();
@@ -159,6 +159,7 @@ namespace Project
                 {
                     UserBalanceLab.Text = Convert.ToString(user1.Balance);
                     lbl_debt.Text = Convert.ToString(user1.Debt);
+                    txtbox_askLoan.Clear();
                     askLoan_stat.Text = string.Format("Succesfully added ${0} to your account", val);
                 }
                 else
@@ -193,6 +194,7 @@ namespace Project
                     UserBalanceLab.Text = Convert.ToString(user1.Balance);
                     lbl_debt.Text = Convert.ToString(user1.Debt);
                     label4.Text = "Completed Successfully";
+                    payDebt.Clear();
                 }
                 else
                 {

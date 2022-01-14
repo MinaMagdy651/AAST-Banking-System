@@ -153,14 +153,15 @@ namespace Project
         {
             if (amount * (double)(0.14) <= (Balance - Debt))
             {
-                Debt += amount + amount * (double)(0.14);
+                Debt += (amount + amount * (double)(0.14));
                 Balance += amount;
                 string query = "UPDATE tbl_accounts_data SET Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
+                command.ExecuteNonQuery();
+                command.Dispose();
 
-                query = "UPDATE tbl_accounts_data SET Debt = " + Balance + " WHERE AccountNumber = " + Account_Number;
+                query = "UPDATE tbl_accounts_data SET Balance = " + Balance + " WHERE AccountNumber = " + Account_Number;
                 command = new SqlCommand(query, connect);
-
                 command.ExecuteNonQuery();
                 command.Dispose();
                 return true;
