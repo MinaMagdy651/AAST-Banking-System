@@ -13,7 +13,7 @@ namespace Project
 
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new lgnfrm());
+            Application.Run(new MainForm());
 
         }
     }
