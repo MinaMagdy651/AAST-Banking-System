@@ -30,11 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.BtnChangePass = new System.Windows.Forms.Button();
             this.TxtOldPass = new System.Windows.Forms.TextBox();
             this.TxtNewPass = new System.Windows.Forms.TextBox();
             this.ChangePassStat = new System.Windows.Forms.Label();
-            this.btn_save = new System.Windows.Forms.Button();
+            this.btn_change = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,29 +54,18 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "New Password : ";
             // 
-            // BtnChangePass
-            // 
-            this.BtnChangePass.Location = new System.Drawing.Point(251, 251);
-            this.BtnChangePass.Name = "BtnChangePass";
-            this.BtnChangePass.Size = new System.Drawing.Size(111, 29);
-            this.BtnChangePass.TabIndex = 2;
-            this.BtnChangePass.Text = "Cancel";
-            this.BtnChangePass.UseVisualStyleBackColor = true;
-            this.BtnChangePass.Click += new System.EventHandler(this.BtnChangePass_Click);
-            // 
             // TxtOldPass
             // 
             this.TxtOldPass.Location = new System.Drawing.Point(177, 57);
             this.TxtOldPass.Name = "TxtOldPass";
-            this.TxtOldPass.PlaceholderText = "Enter the old password..";
             this.TxtOldPass.Size = new System.Drawing.Size(185, 27);
             this.TxtOldPass.TabIndex = 3;
+            this.TxtOldPass.UseSystemPasswordChar = true;
             // 
             // TxtNewPass
             // 
             this.TxtNewPass.Location = new System.Drawing.Point(177, 139);
             this.TxtNewPass.Name = "TxtNewPass";
-            this.TxtNewPass.PlaceholderText = "Enter the new password..";
             this.TxtNewPass.Size = new System.Drawing.Size(185, 27);
             this.TxtNewPass.TabIndex = 4;
             this.TxtNewPass.UseSystemPasswordChar = true;
@@ -85,37 +73,40 @@
             // ChangePassStat
             // 
             this.ChangePassStat.AutoSize = true;
-            this.ChangePassStat.Location = new System.Drawing.Point(113, 208);
+            this.ChangePassStat.Location = new System.Drawing.Point(75, 231);
             this.ChangePassStat.Name = "ChangePassStat";
             this.ChangePassStat.Size = new System.Drawing.Size(0, 20);
             this.ChangePassStat.TabIndex = 5;
             // 
-            // btn_save
+            // btn_change
             // 
-            this.btn_save.Location = new System.Drawing.Point(11, 251);
-            this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(111, 29);
-            this.btn_save.TabIndex = 6;
-            this.btn_save.Text = "Save Change";
-            this.btn_save.UseVisualStyleBackColor = true;
-            this.btn_save.Click += new System.EventHandler(this.button1_Click);
+            this.btn_change.BackColor = System.Drawing.Color.Orange;
+            this.btn_change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_change.ForeColor = System.Drawing.Color.White;
+            this.btn_change.Location = new System.Drawing.Point(234, 186);
+            this.btn_change.Name = "btn_change";
+            this.btn_change.Size = new System.Drawing.Size(128, 29);
+            this.btn_change.TabIndex = 34;
+            this.btn_change.Text = "Save Change";
+            this.btn_change.UseVisualStyleBackColor = false;
+            this.btn_change.Click += new System.EventHandler(this.btn_change_Click);
             // 
             // ChangePass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 360);
-            this.Controls.Add(this.btn_save);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(439, 348);
+            this.Controls.Add(this.btn_change);
             this.Controls.Add(this.ChangePassStat);
             this.Controls.Add(this.TxtNewPass);
             this.Controls.Add(this.TxtOldPass);
-            this.Controls.Add(this.BtnChangePass);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ChangePass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Change Password";
-            this.Load += new System.EventHandler(this.ChangePass_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -125,10 +116,9 @@
 
         private Label label1;
         private Label label2;
-        private Button BtnChangePass;
         private TextBox TxtOldPass;
         private TextBox TxtNewPass;
         private Label ChangePassStat;
-        private Button btn_save;
+        private Button btn_change;
     }
 }

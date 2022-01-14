@@ -14,9 +14,26 @@ namespace Project
     {
         private Button currentButton;
         private Form activeForm;
+
+        UInt32 accNum;
         public MainForm()
         {
             InitializeComponent();
+        }
+        public MainForm(UInt32 num)
+        {
+
+            InitializeComponent();
+            accNum = num;
+            HomeScreen homeScreen = new HomeScreen(num);
+            activeForm = homeScreen;
+            homeScreen.TopLevel = false;
+            homeScreen.FormBorderStyle = FormBorderStyle.None;
+            homeScreen.Dock = DockStyle.Fill;
+            this.panelDeskTop.Controls.Add(homeScreen);
+            this.panelDeskTop.Tag = homeScreen;
+            homeScreen.BringToFront();
+            homeScreen.Show();
         }
 
         private Color SelectThemeColor()
@@ -50,10 +67,12 @@ namespace Project
         }
         private void OpenFormChild(Form childForm, object btnSender)
         {
+            DisableButton();
             if (activeForm != null)
             {
                 activeForm.Close();
             }
+
             ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;
@@ -67,36 +86,53 @@ namespace Project
 
         private void btn_deposit_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new Deposit(1), sender);
+            OpenFormChild(new Deposit(accNum), sender);
         }
         private void btn_withdraw_Click(object sender, EventArgs e)
         {
-            OpenFormChild(new lgnfrm(), sender);
+            OpenFormChild(new Withdraw(accNum), sender);
         }
 
         private void btn_transfer_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenFormChild(new Transfer(accNum), sender);
         }
 
         private void btn_loan_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenFormChild(new Loan(accNum), sender);
         }
 
         private void btn_debt_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenFormChild(new Debt(accNum), sender);
         }
 
         private void btn_changepw_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            OpenFormChild(new ChangePass(accNum), sender);
         }
 
         private void btn_signout_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
+        }
+
+        private void panelDeskTop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_home_Click(object sender, EventArgs e)
+        {
+            if(activeForm != null)
+            {
+                activeForm.Close();
+            }
+            DisableButton();
+            OpenFormChild(new HomeScreen(accNum), sender);
+            btn_home.BackColor = Color.FromArgb(39, 39, 58);
+
         }
 
     }

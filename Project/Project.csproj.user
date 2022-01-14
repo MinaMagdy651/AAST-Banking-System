@@ -8,13 +8,22 @@
     <Compile Update="ChangePass.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Debt.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="HomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="lgnfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Loan.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="MainForm.cs">
@@ -23,10 +32,16 @@
     <Compile Update="TellerForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Transfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserData.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="UserEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Withdraw.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

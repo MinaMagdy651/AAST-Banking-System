@@ -13,7 +13,7 @@ namespace Project
 
 
             ApplicationConfiguration.Initialize();
-            Application.Run(new MainForm());
+            Application.Run(new MainForm(1));
 
         }
     }

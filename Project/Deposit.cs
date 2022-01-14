@@ -20,14 +20,6 @@ namespace Project
         public Deposit(UInt32 num)
         {
             user1 = new User(num);
-            if (user1.AccountType == 1)
-            {
-                user1 = new FixedAccount(num);
-            }
-            else
-            {
-                user1 = new SavingAccount(num);
-            }
             InitializeComponent();
             lbl_balance.Text = Convert.ToString(user1.Balance);
         }
@@ -42,14 +34,53 @@ namespace Project
                 {
                     lbl_depStat.Text = "Succesful transaction";
                     lbl_bal.Text = Convert.ToString(user1.Balance);
-                    textDeposit.Clear();
                 }
+                else
+                {
+                    lbl_depStat.Text = "Please enter a valid amount";
+                }
+                textDeposit.Clear();
             }
             catch (Exception ex)
             {
                 textDeposit.Clear();
                 lbl_depStat.Text = "Please enter a valid amount";
             }
+        }
+
+        private void Deposit_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textDeposit_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_balance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_depStat_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_bal_Click(object sender, EventArgs e)
+        {
+
         }
     }
   

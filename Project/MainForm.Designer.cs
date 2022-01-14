@@ -37,11 +37,11 @@
             this.btn_withdraw = new System.Windows.Forms.Button();
             this.btn_deposit = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.btn_home = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -201,24 +201,12 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
-            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Controls.Add(this.btn_home);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
             this.panelLogo.Size = new System.Drawing.Size(220, 80);
             this.panelLogo.TabIndex = 1;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.LightGray;
-            this.label1.Location = new System.Drawing.Point(32, 25);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 31);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Services";
             // 
             // panelTitle
             // 
@@ -261,6 +249,26 @@
             this.panelDeskTop.Name = "panelDeskTop";
             this.panelDeskTop.Size = new System.Drawing.Size(581, 453);
             this.panelDeskTop.TabIndex = 2;
+            this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
+            // 
+            // btn_home
+            // 
+            this.btn_home.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_home.FlatAppearance.BorderSize = 0;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_home.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_home.Image = global::Project.Properties.Resources.icons8_home_48;
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(0, 0);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_home.Size = new System.Drawing.Size(220, 77);
+            this.btn_home.TabIndex = 1;
+            this.btn_home.Text = "Home";
+            this.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
             // 
             // MainForm
             // 
@@ -274,7 +282,6 @@
             this.Text = "MainForm";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
-            this.panelLogo.PerformLayout();
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -296,7 +303,7 @@
         private Panel panelTitle;
         private Label lbl_Title;
         private PictureBox pictureBox1;
-        private Label label1;
         private Panel panelDeskTop;
+        private Button btn_home;
     }
 }

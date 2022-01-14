@@ -40,9 +40,10 @@
             // btn_deposit
             // 
             this.btn_deposit.BackColor = System.Drawing.Color.Orange;
+            this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_deposit.ForeColor = System.Drawing.Color.White;
-            this.btn_deposit.Location = new System.Drawing.Point(218, 70);
+            this.btn_deposit.Location = new System.Drawing.Point(213, 54);
             this.btn_deposit.Name = "btn_deposit";
             this.btn_deposit.Size = new System.Drawing.Size(94, 29);
             this.btn_deposit.TabIndex = 9;
@@ -53,64 +54,70 @@
             // textDeposit
             // 
             this.textDeposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textDeposit.Location = new System.Drawing.Point(87, 71);
+            this.textDeposit.Location = new System.Drawing.Point(82, 55);
             this.textDeposit.Name = "textDeposit";
             this.textDeposit.Size = new System.Drawing.Size(125, 26);
             this.textDeposit.TabIndex = 8;
+            this.textDeposit.TextChanged += new System.EventHandler(this.textDeposit_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(17, 74);
+            this.label3.Location = new System.Drawing.Point(12, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 7;
             this.label3.Text = "Amount:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // lbl_balance
             // 
             this.lbl_balance.AutoSize = true;
             this.lbl_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_balance.Location = new System.Drawing.Point(87, 25);
+            this.lbl_balance.Location = new System.Drawing.Point(82, 9);
             this.lbl_balance.Name = "lbl_balance";
             this.lbl_balance.Size = new System.Drawing.Size(0, 20);
             this.lbl_balance.TabIndex = 6;
+            this.lbl_balance.Click += new System.EventHandler(this.lbl_balance_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(17, 25);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Balance:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // lbl_depStat
             // 
             this.lbl_depStat.AutoSize = true;
             this.lbl_depStat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_depStat.Location = new System.Drawing.Point(189, 143);
+            this.lbl_depStat.Location = new System.Drawing.Point(123, 124);
             this.lbl_depStat.Name = "lbl_depStat";
             this.lbl_depStat.Size = new System.Drawing.Size(0, 20);
             this.lbl_depStat.TabIndex = 10;
+            this.lbl_depStat.Click += new System.EventHandler(this.lbl_depStat_Click);
             // 
             // lbl_bal
             // 
             this.lbl_bal.AutoSize = true;
             this.lbl_bal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_bal.Location = new System.Drawing.Point(87, 25);
+            this.lbl_bal.Location = new System.Drawing.Point(82, 9);
             this.lbl_bal.Name = "lbl_bal";
             this.lbl_bal.Size = new System.Drawing.Size(0, 20);
             this.lbl_bal.TabIndex = 11;
+            this.lbl_bal.Click += new System.EventHandler(this.lbl_bal_Click);
             // 
             // Deposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(544, 243);
+            this.BackColor = System.Drawing.Color.DarkGray;
+            this.ClientSize = new System.Drawing.Size(394, 147);
             this.Controls.Add(this.lbl_bal);
             this.Controls.Add(this.lbl_depStat);
             this.Controls.Add(this.btn_deposit);
@@ -119,7 +126,9 @@
             this.Controls.Add(this.lbl_balance);
             this.Controls.Add(this.label1);
             this.Name = "Deposit";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Deposit";
+            this.Load += new System.EventHandler(this.Deposit_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
