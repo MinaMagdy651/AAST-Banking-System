@@ -40,7 +40,7 @@ namespace Project
                 TxtOldPass.Clear();
                 TxtNewPass.Clear();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 ChangePassStat.Text = "Password doesn't match";
                 TxtOldPass.Clear();

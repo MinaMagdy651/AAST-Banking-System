@@ -14,9 +14,6 @@
     <Compile Update="Deposit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="HomeScreen.cs">
       <SubType>Form</SubType>
     </Compile>

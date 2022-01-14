@@ -117,7 +117,6 @@ C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.AddUs
 C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.ChangePass.resources
 C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.Debt.resources
 C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.Deposit.resources
-C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.Form1.resources
 C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.HomeScreen.resources
 C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.lgnfrm.resources
 C:\Project with GUI\Final Project\Project\obj\Debug\net6.0-windows\Project.Loan.resources

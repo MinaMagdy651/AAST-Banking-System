@@ -115,7 +115,10 @@ namespace Project
 
         private void btn_signout_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            this.Hide();
+            lgnfrm newlgn = new lgnfrm();
+            newlgn.Closed += (s, args) => this.Close();
+            newlgn.Show();
         }
 
         private void panelDeskTop_Paint(object sender, PaintEventArgs e)

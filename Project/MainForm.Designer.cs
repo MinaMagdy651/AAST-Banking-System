@@ -37,11 +37,11 @@
             this.btn_withdraw = new System.Windows.Forms.Button();
             this.btn_deposit = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.btn_home = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panelDeskTop = new System.Windows.Forms.Panel();
-            this.btn_home = new System.Windows.Forms.Button();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -208,6 +208,25 @@
             this.panelLogo.Size = new System.Drawing.Size(220, 80);
             this.panelLogo.TabIndex = 1;
             // 
+            // btn_home
+            // 
+            this.btn_home.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_home.FlatAppearance.BorderSize = 0;
+            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_home.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_home.Image = global::Project.Properties.Resources.icons8_home_48;
+            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.Location = new System.Drawing.Point(0, 0);
+            this.btn_home.Name = "btn_home";
+            this.btn_home.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_home.Size = new System.Drawing.Size(220, 77);
+            this.btn_home.TabIndex = 1;
+            this.btn_home.Text = "Home";
+            this.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_home.UseVisualStyleBackColor = true;
+            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
+            // 
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
@@ -251,25 +270,6 @@
             this.panelDeskTop.TabIndex = 2;
             this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
             // 
-            // btn_home
-            // 
-            this.btn_home.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_home.FlatAppearance.BorderSize = 0;
-            this.btn_home.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_home.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btn_home.Image = global::Project.Properties.Resources.icons8_home_48;
-            this.btn_home.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_home.Location = new System.Drawing.Point(0, 0);
-            this.btn_home.Name = "btn_home";
-            this.btn_home.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.btn_home.Size = new System.Drawing.Size(220, 77);
-            this.btn_home.TabIndex = 1;
-            this.btn_home.Text = "Home";
-            this.btn_home.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_home.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_home.UseVisualStyleBackColor = true;
-            this.btn_home.Click += new System.EventHandler(this.btn_home_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -279,6 +279,7 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.panelMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
