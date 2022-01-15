@@ -60,6 +60,7 @@
             // btn_withdraw
             // 
             this.btn_withdraw.BackColor = System.Drawing.Color.Orange;
+            this.btn_withdraw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_withdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_withdraw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_withdraw.ForeColor = System.Drawing.Color.White;
@@ -115,7 +116,7 @@
             // Withdraw
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(394, 147);
             this.Controls.Add(this.lbl_bal);
             this.Controls.Add(this.lbl_WithdrawStat);

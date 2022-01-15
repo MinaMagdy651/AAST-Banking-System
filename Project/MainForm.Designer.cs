@@ -42,6 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_Title = new System.Windows.Forms.Label();
             this.panelDeskTop = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitle.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             // btn_signout
             // 
+            this.btn_signout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_signout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_signout.FlatAppearance.BorderSize = 0;
             this.btn_signout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -86,6 +88,7 @@
             // 
             // btn_changepw
             // 
+            this.btn_changepw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_changepw.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_changepw.FlatAppearance.BorderSize = 0;
             this.btn_changepw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -105,6 +108,7 @@
             // 
             // btn_debt
             // 
+            this.btn_debt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_debt.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_debt.FlatAppearance.BorderSize = 0;
             this.btn_debt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -124,6 +128,7 @@
             // 
             // btn_loan
             // 
+            this.btn_loan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_loan.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_loan.FlatAppearance.BorderSize = 0;
             this.btn_loan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -143,6 +148,7 @@
             // 
             // btn_transfer
             // 
+            this.btn_transfer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_transfer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_transfer.FlatAppearance.BorderSize = 0;
             this.btn_transfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -162,6 +168,7 @@
             // 
             // btn_withdraw
             // 
+            this.btn_withdraw.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_withdraw.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_withdraw.FlatAppearance.BorderSize = 0;
             this.btn_withdraw.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -181,6 +188,7 @@
             // 
             // btn_deposit
             // 
+            this.btn_deposit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_deposit.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_deposit.FlatAppearance.BorderSize = 0;
             this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -202,6 +210,7 @@
             // 
             this.panelLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(39)))), ((int)(((byte)(58)))));
             this.panelLogo.Controls.Add(this.btn_home);
+            this.panelLogo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
@@ -230,6 +239,7 @@
             // panelTitle
             // 
             this.panelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
+            this.panelTitle.Controls.Add(this.label2);
             this.panelTitle.Controls.Add(this.pictureBox1);
             this.panelTitle.Controls.Add(this.lbl_Title);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
@@ -263,12 +273,23 @@
             // 
             // panelDeskTop
             // 
-            this.panelDeskTop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDeskTop.Location = new System.Drawing.Point(220, 80);
             this.panelDeskTop.Name = "panelDeskTop";
             this.panelDeskTop.Size = new System.Drawing.Size(581, 453);
             this.panelDeskTop.TabIndex = 2;
             this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(544, 12);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(25, 28);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // MainForm
             // 
@@ -278,6 +299,7 @@
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
@@ -306,5 +328,6 @@
         private PictureBox pictureBox1;
         private Panel panelDeskTop;
         private Button btn_home;
+        private Label label2;
     }
 }

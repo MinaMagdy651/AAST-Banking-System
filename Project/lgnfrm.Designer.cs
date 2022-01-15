@@ -36,9 +36,11 @@
             this.btn_exit = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_username
@@ -84,20 +86,23 @@
             // btn_lgin
             // 
             this.btn_lgin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.btn_lgin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_lgin.FlatAppearance.BorderSize = 0;
             this.btn_lgin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_lgin.Location = new System.Drawing.Point(113, 274);
-            this.btn_lgin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btn_lgin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 4);
             this.btn_lgin.Name = "btn_lgin";
             this.btn_lgin.Size = new System.Drawing.Size(96, 31);
             this.btn_lgin.TabIndex = 4;
             this.btn_lgin.Text = "Login";
             this.btn_lgin.UseVisualStyleBackColor = false;
             this.btn_lgin.Click += new System.EventHandler(this.btn_lgin_Click);
+            this.btn_lgin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_lgin_KeyPress);
             // 
             // btn_exit
             // 
             this.btn_exit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(218)))), ((int)(((byte)(220)))));
+            this.btn_exit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_exit.FlatAppearance.BorderSize = 0;
             this.btn_exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_exit.Location = new System.Drawing.Point(253, 274);
@@ -122,10 +127,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(53)))), ((int)(((byte)(87)))));
+            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-4, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(510, 70);
             this.panel1.TabIndex = 7;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Snow;
+            this.label2.Location = new System.Drawing.Point(468, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "X";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -152,24 +170,26 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(250)))), ((int)(((byte)(238)))));
             this.ClientSize = new System.Drawing.Size(505, 351);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.btn_lgin);
             this.Controls.Add(this.passwordtxt);
             this.Controls.Add(this.usernametxt);
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_username);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "lgnfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login Page";
-            this.Load += new System.EventHandler(this.lgnfrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +207,6 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
+        private Label label2;
     }
 }

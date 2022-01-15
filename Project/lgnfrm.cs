@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
 
 namespace Project
 {
@@ -17,7 +18,6 @@ namespace Project
         {
             InitializeComponent();
         }
-
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -63,9 +63,17 @@ namespace Project
             
         }
 
-        private void lgnfrm_Load(object sender, EventArgs e)
+      
+       
+
+        private void btn_lgin_KeyPress(object sender, KeyPressEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

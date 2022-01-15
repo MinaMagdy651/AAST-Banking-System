@@ -27,7 +27,7 @@ namespace Project
             balance.Text = Convert.ToString(user1.Balance);
             debt.Text = Convert.ToString(user1.Debt);
             AccNum.Text = Convert.ToString(accountnumber);
-            label2.Text = DateTime.Now.ToLongDateString();
+            Date.Text = DateTime.Now.ToLongDateString();
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -65,6 +65,19 @@ namespace Project
         private void UserEdit_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            TellerForm tellerform = new TellerForm();
+            tellerform.Closed += (s, args) => this.Close();
+            tellerform.Show();
         }
     }
 }
