@@ -41,46 +41,11 @@ namespace Project
                 }
                 textDeposit.Clear();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 textDeposit.Clear();
                 lbl_depStat.Text = "Please enter a valid amount";
             }
-        }
-
-        private void Deposit_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textDeposit_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_balance_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_depStat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_bal_Click(object sender, EventArgs e)
-        {
-
         }
     }
   

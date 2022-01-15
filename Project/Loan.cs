@@ -48,20 +48,5 @@ namespace Project
                 txtbox_askLoan.Clear();
             }
         }
-
-        private void askLoan_stat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtbox_askLoan_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

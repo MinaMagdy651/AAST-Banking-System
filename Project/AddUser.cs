@@ -126,5 +126,19 @@ namespace Project
                 chck_Saving.Checked = false;
             }
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            TellerForm tellerform = new TellerForm();
+            tellerform.Closed += (s, args) => this.Close();
+            tellerform.Show();
+        }
     }
 }

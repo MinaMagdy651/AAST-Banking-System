@@ -24,11 +24,6 @@ namespace Project
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -73,18 +68,17 @@ namespace Project
                 else
                 {
                     label2.Text = "Account number not found..";
+                    label2.ForeColor = Color.Black;
                 }
             }
             else
             {
                 label2.Text = "The entered data is invalid..";
+                label2.ForeColor = Color.Black;
             }
         }
 
-        private void AccNum_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
+
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -93,12 +87,6 @@ namespace Project
             newlgn.Closed += (s, args) => this.Close();
             newlgn.Show();
         }
-
-        private void TellerForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -126,6 +114,11 @@ namespace Project
             {
                 label2.Text = "The entered data is invalid..";
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

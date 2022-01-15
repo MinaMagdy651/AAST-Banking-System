@@ -39,18 +39,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(10, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Old Password : ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(10, 145);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(115, 20);
+            this.label2.Size = new System.Drawing.Size(124, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "New Password : ";
             // 
@@ -81,12 +83,15 @@
             // btn_change
             // 
             this.btn_change.BackColor = System.Drawing.Color.Orange;
+            this.btn_change.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_change.FlatAppearance.BorderSize = 0;
             this.btn_change.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_change.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_change.ForeColor = System.Drawing.Color.White;
-            this.btn_change.Location = new System.Drawing.Point(234, 186);
+            this.btn_change.Location = new System.Drawing.Point(208, 186);
+            this.btn_change.Margin = new System.Windows.Forms.Padding(0);
             this.btn_change.Name = "btn_change";
-            this.btn_change.Size = new System.Drawing.Size(128, 29);
+            this.btn_change.Size = new System.Drawing.Size(154, 35);
             this.btn_change.TabIndex = 34;
             this.btn_change.Text = "Save Change";
             this.btn_change.UseVisualStyleBackColor = false;
@@ -96,7 +101,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(439, 348);
             this.Controls.Add(this.btn_change);
             this.Controls.Add(this.ChangePassStat);

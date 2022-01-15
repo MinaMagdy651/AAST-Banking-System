@@ -37,9 +37,5 @@ namespace Project
             lbl_accType.Text = user1.GetType();
         }
 
-        private void HomeScreen_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

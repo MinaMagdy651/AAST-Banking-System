@@ -43,7 +43,7 @@
             // 
             this.lbl_bal.AutoSize = true;
             this.lbl_bal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_bal.Location = new System.Drawing.Point(82, 9);
+            this.lbl_bal.Location = new System.Drawing.Point(101, 9);
             this.lbl_bal.Name = "lbl_bal";
             this.lbl_bal.Size = new System.Drawing.Size(0, 20);
             this.lbl_bal.TabIndex = 27;
@@ -52,7 +52,7 @@
             // 
             this.lbl_balance.AutoSize = true;
             this.lbl_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_balance.Location = new System.Drawing.Point(82, 9);
+            this.lbl_balance.Location = new System.Drawing.Point(101, 9);
             this.lbl_balance.Name = "lbl_balance";
             this.lbl_balance.Size = new System.Drawing.Size(0, 20);
             this.lbl_balance.TabIndex = 26;
@@ -60,20 +60,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 25;
             this.label1.Text = "Balance:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(235, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 20);
+            this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 28;
             this.label4.Text = "Debt:";
             // 
@@ -89,10 +89,12 @@
             // btn_debt
             // 
             this.btn_debt.BackColor = System.Drawing.Color.Orange;
+            this.btn_debt.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_debt.FlatAppearance.BorderSize = 0;
             this.btn_debt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_debt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_debt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_debt.ForeColor = System.Drawing.Color.White;
-            this.btn_debt.Location = new System.Drawing.Point(235, 65);
+            this.btn_debt.Location = new System.Drawing.Point(235, 61);
             this.btn_debt.Name = "btn_debt";
             this.btn_debt.Size = new System.Drawing.Size(141, 29);
             this.btn_debt.TabIndex = 33;
@@ -102,7 +104,7 @@
             // 
             // txtbox_debt
             // 
-            this.txtbox_debt.Location = new System.Drawing.Point(89, 66);
+            this.txtbox_debt.Location = new System.Drawing.Point(104, 63);
             this.txtbox_debt.Name = "txtbox_debt";
             this.txtbox_debt.Size = new System.Drawing.Size(125, 27);
             this.txtbox_debt.TabIndex = 32;
@@ -110,10 +112,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(12, 66);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 20);
+            this.label5.Size = new System.Drawing.Size(78, 20);
             this.label5.TabIndex = 31;
             this.label5.Text = "Amount:";
             // 
@@ -121,7 +123,7 @@
             // 
             this.lbl_debt.AutoSize = true;
             this.lbl_debt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_debt.Location = new System.Drawing.Point(282, 9);
+            this.lbl_debt.Location = new System.Drawing.Point(296, 9);
             this.lbl_debt.Name = "lbl_debt";
             this.lbl_debt.Size = new System.Drawing.Size(0, 20);
             this.lbl_debt.TabIndex = 35;
@@ -130,7 +132,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(443, 183);
             this.Controls.Add(this.lbl_debt);
             this.Controls.Add(this.debt_stat);

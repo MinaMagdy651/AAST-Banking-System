@@ -53,10 +53,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(337, 65);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(123, 25);
+            this.label5.Size = new System.Drawing.Size(134, 25);
             this.label5.TabIndex = 48;
             this.label5.Text = "Account Type:";
             // 
@@ -72,10 +72,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(12, 133);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(156, 25);
+            this.label6.Size = new System.Drawing.Size(172, 25);
             this.label6.TabIndex = 46;
             this.label6.Text = "Expected Balance: ";
             // 
@@ -91,10 +91,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(187, 65);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 25);
+            this.label3.Size = new System.Drawing.Size(58, 25);
             this.label3.TabIndex = 44;
             this.label3.Text = "Debt:";
             // 
@@ -119,20 +119,20 @@
             // BalanceLab
             // 
             this.BalanceLab.AutoSize = true;
-            this.BalanceLab.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BalanceLab.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.BalanceLab.Location = new System.Drawing.Point(12, 65);
             this.BalanceLab.Name = "BalanceLab";
-            this.BalanceLab.Size = new System.Drawing.Size(80, 25);
+            this.BalanceLab.Size = new System.Drawing.Size(89, 25);
             this.BalanceLab.TabIndex = 40;
             this.BalanceLab.Text = "Balance: ";
             // 
             // Message1Lab
             // 
             this.Message1Lab.AutoSize = true;
-            this.Message1Lab.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Message1Lab.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Message1Lab.Location = new System.Drawing.Point(12, 9);
             this.Message1Lab.Name = "Message1Lab";
-            this.Message1Lab.Size = new System.Drawing.Size(62, 25);
+            this.Message1Lab.Size = new System.Drawing.Size(67, 25);
             this.Message1Lab.TabIndex = 39;
             this.Message1Lab.Text = "Hello, ";
             // 
@@ -140,7 +140,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 258);
             this.Controls.Add(this.lbl_accType);
             this.Controls.Add(this.label5);
@@ -154,7 +154,6 @@
             this.Controls.Add(this.Message1Lab);
             this.Name = "HomeScreen";
             this.Text = "HomeScreen";
-            this.Load += new System.EventHandler(this.HomeScreen_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

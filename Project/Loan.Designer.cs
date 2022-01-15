@@ -41,7 +41,7 @@
             // 
             this.lbl_bal.AutoSize = true;
             this.lbl_bal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_bal.Location = new System.Drawing.Point(82, 9);
+            this.lbl_bal.Location = new System.Drawing.Point(101, 9);
             this.lbl_bal.Name = "lbl_bal";
             this.lbl_bal.Size = new System.Drawing.Size(0, 20);
             this.lbl_bal.TabIndex = 24;
@@ -50,7 +50,7 @@
             // 
             this.lbl_balance.AutoSize = true;
             this.lbl_balance.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_balance.Location = new System.Drawing.Point(82, 9);
+            this.lbl_balance.Location = new System.Drawing.Point(101, 9);
             this.lbl_balance.Name = "lbl_balance";
             this.lbl_balance.Size = new System.Drawing.Size(0, 20);
             this.lbl_balance.TabIndex = 23;
@@ -58,23 +58,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 20);
+            this.label1.Size = new System.Drawing.Size(83, 20);
             this.label1.TabIndex = 22;
             this.label1.Text = "Balance:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(12, 59);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 20);
+            this.label2.Size = new System.Drawing.Size(78, 20);
             this.label2.TabIndex = 25;
             this.label2.Text = "Amount:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtbox_askLoan
             // 
@@ -82,13 +81,14 @@
             this.txtbox_askLoan.Name = "txtbox_askLoan";
             this.txtbox_askLoan.Size = new System.Drawing.Size(125, 27);
             this.txtbox_askLoan.TabIndex = 26;
-            this.txtbox_askLoan.TextChanged += new System.EventHandler(this.txtbox_askLoan_TextChanged);
             // 
             // btn_transfer
             // 
             this.btn_transfer.BackColor = System.Drawing.Color.Orange;
+            this.btn_transfer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_transfer.FlatAppearance.BorderSize = 0;
             this.btn_transfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_transfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_transfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btn_transfer.ForeColor = System.Drawing.Color.White;
             this.btn_transfer.Location = new System.Drawing.Point(236, 59);
             this.btn_transfer.Name = "btn_transfer";
@@ -106,13 +106,12 @@
             this.askLoan_stat.Name = "askLoan_stat";
             this.askLoan_stat.Size = new System.Drawing.Size(0, 20);
             this.askLoan_stat.TabIndex = 30;
-            this.askLoan_stat.Click += new System.EventHandler(this.askLoan_stat_Click);
             // 
             // Loan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(426, 190);
             this.Controls.Add(this.askLoan_stat);
             this.Controls.Add(this.btn_transfer);

@@ -41,46 +41,11 @@ namespace Project
                 }
                 textWithdraw.Clear();
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 textWithdraw.Clear();
                 lbl_WithdrawStat.Text = "Please enter a valid amount";
             }
-        }
-
-        private void Withdraw_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_WithdrawStat_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_bal_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textWithdraw_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lbl_balance_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

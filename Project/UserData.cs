@@ -39,9 +39,19 @@ namespace Project
             tellerform.Show();
         }
 
-        private void UserData_Load(object sender, EventArgs e)
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+            this.Hide();
+            TellerForm tellerform = new TellerForm();
+            tellerform.Closed += (s, args) => this.Close();
+            tellerform.Show();
         }
     }
 }

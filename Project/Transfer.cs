@@ -52,7 +52,7 @@ namespace Project
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 TxtTranUser.Clear();
                 TxtTranAmount.Clear();

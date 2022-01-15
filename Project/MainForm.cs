@@ -14,6 +14,7 @@ namespace Project
     {
         private Button currentButton;
         private Form activeForm;
+        private Panel leftpanel;
 
         UInt32 accNum;
         public MainForm()
@@ -33,7 +34,11 @@ namespace Project
             this.panelDeskTop.Controls.Add(homeScreen);
             this.panelDeskTop.Tag = homeScreen;
             homeScreen.BringToFront();
-            homeScreen.Show();
+            homeScreen.Show();  
+            leftpanel = new Panel();
+            leftpanel.Size = new Size(7, 60);
+            panelMenu.Controls.Add(leftpanel);
+
         }
 
         private Color SelectThemeColor()
@@ -128,7 +133,7 @@ namespace Project
 
         private void btn_home_Click(object sender, EventArgs e)
         {
-            if(activeForm != null)
+            if (activeForm != null)
             {
                 activeForm.Close();
             }
@@ -138,5 +143,10 @@ namespace Project
 
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
+       
 }
