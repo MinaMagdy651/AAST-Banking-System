@@ -113,6 +113,7 @@
             // btn_transfer
             // 
             this.btn_transfer.BackColor = System.Drawing.Color.Orange;
+            this.btn_transfer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_transfer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_transfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_transfer.ForeColor = System.Drawing.Color.White;
@@ -128,7 +129,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(448, 236);
             this.Controls.Add(this.btn_transfer);
             this.Controls.Add(this.transferstat);

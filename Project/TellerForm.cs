@@ -73,11 +73,13 @@ namespace Project
                 else
                 {
                     label2.Text = "Account number not found..";
+                    label2.ForeColor = Color.Black;
                 }
             }
             else
             {
                 label2.Text = "The entered data is invalid..";
+                label2.ForeColor = Color.Black;
             }
         }
 
@@ -126,6 +128,16 @@ namespace Project
             {
                 label2.Text = "The entered data is invalid..";
             }
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

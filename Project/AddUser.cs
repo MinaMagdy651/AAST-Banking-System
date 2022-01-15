@@ -126,5 +126,43 @@ namespace Project
                 chck_Saving.Checked = false;
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_email_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox6_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            TellerForm tellerform = new TellerForm();
+            tellerform.Closed += (s, args) => this.Close();
+            tellerform.Show();
+        }
     }
 }

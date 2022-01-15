@@ -89,6 +89,7 @@
             // btn_debt
             // 
             this.btn_debt.BackColor = System.Drawing.Color.Orange;
+            this.btn_debt.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_debt.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_debt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_debt.ForeColor = System.Drawing.Color.White;
@@ -130,7 +131,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(443, 183);
             this.Controls.Add(this.lbl_debt);
             this.Controls.Add(this.debt_stat);

@@ -40,6 +40,7 @@
             // btn_deposit
             // 
             this.btn_deposit.BackColor = System.Drawing.Color.Orange;
+            this.btn_deposit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_deposit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deposit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btn_deposit.ForeColor = System.Drawing.Color.White;
@@ -116,7 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(394, 147);
             this.Controls.Add(this.lbl_bal);
             this.Controls.Add(this.lbl_depStat);
