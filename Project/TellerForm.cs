@@ -28,7 +28,7 @@ namespace Project
         {
 
 
-            if (!string.IsNullOrEmpty(AccNum.Text) && AccNum.Text.All(char.IsNumber))
+            try
             {
                 UInt32 accountnumber = Convert.ToUInt32(AccNum.Text);
                 User user1 = new User(accountnumber);
@@ -43,17 +43,20 @@ namespace Project
                 else
                 {
                     label2.Text = "Account number not found..";
+                    AccNum.Clear();
+           
                 }
             }
-            else
+            catch (Exception)
             {
-                label2.Text = "The entered data is invalid..";
+                label2.Text = "The entered data is invalid";
+                AccNum.Clear();
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(AccNum.Text) && AccNum.Text.All(char.IsNumber))
+            try
             {
                 UInt32 accountnumber = Convert.ToUInt32(AccNum.Text);
                 User user1 = new User(accountnumber);
@@ -69,12 +72,14 @@ namespace Project
                 {
                     label2.Text = "Account number not found..";
                     label2.ForeColor = Color.Black;
+                    AccNum.Clear();
                 }
             }
-            else
+            catch(Exception)
             {
                 label2.Text = "The entered data is invalid..";
                 label2.ForeColor = Color.Black;
+                AccNum.Clear();
             }
         }
 
@@ -99,7 +104,7 @@ namespace Project
         private void button5_Click(object sender, EventArgs e)
         {
 
-            if (!string.IsNullOrEmpty(AccNum.Text) && AccNum.Text.All(char.IsNumber))
+            try
             {
                 UInt32 accountnumber = Convert.ToUInt32(AccNum.Text);
                 Teller = new teller();
@@ -109,10 +114,12 @@ namespace Project
                 else
 
                     label2.Text = "Account number not found";
+                AccNum.Clear();
             }
-            else
+            catch (Exception)
             {
                 label2.Text = "The entered data is invalid..";
+                AccNum.Clear();
             }
         }
 
