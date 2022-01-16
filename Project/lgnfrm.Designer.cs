@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(lgnfrm));
             this.lbl_username = new System.Windows.Forms.Label();
             this.lbl_password = new System.Windows.Forms.Label();
             this.usernametxt = new System.Windows.Forms.TextBox();
@@ -180,6 +181,7 @@
             this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_username);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;

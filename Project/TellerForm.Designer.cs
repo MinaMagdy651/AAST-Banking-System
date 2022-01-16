@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TellerForm));
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -81,6 +82,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(803, 87);
             this.panel1.TabIndex = 9;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -92,6 +94,7 @@
             this.label1.Size = new System.Drawing.Size(168, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Account Number: ";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AccNum
             // 
@@ -102,6 +105,7 @@
             this.AccNum.Name = "AccNum";
             this.AccNum.Size = new System.Drawing.Size(277, 20);
             this.AccNum.TabIndex = 1;
+            this.AccNum.TextChanged += new System.EventHandler(this.AccNum_TextChanged);
             // 
             // button1
             // 
@@ -140,6 +144,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 6;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button5
             // 
@@ -188,6 +193,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 380);
             this.panel2.TabIndex = 10;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -196,6 +202,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(460, 3);
             this.panel3.TabIndex = 12;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label4
             // 
@@ -207,6 +214,7 @@
             this.label4.Size = new System.Drawing.Size(260, 31);
             this.label4.TabIndex = 11;
             this.label4.Text = "AAST Banking Services";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
             // 
@@ -217,6 +225,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // TellerForm
             // 
@@ -227,6 +236,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "TellerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TellerForm";
