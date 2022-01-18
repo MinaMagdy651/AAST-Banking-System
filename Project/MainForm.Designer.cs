@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.btn_signout = new System.Windows.Forms.Button();
+            this.btn_log = new System.Windows.Forms.Button();
             this.btn_changepw = new System.Windows.Forms.Button();
             this.btn_debt = new System.Windows.Forms.Button();
             this.btn_loan = new System.Windows.Forms.Button();
@@ -54,6 +55,7 @@
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
             this.panelMenu.Controls.Add(this.btn_signout);
+            this.panelMenu.Controls.Add(this.btn_log);
             this.panelMenu.Controls.Add(this.btn_changepw);
             this.panelMenu.Controls.Add(this.btn_debt);
             this.panelMenu.Controls.Add(this.btn_loan);
@@ -64,7 +66,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 533);
+            this.panelMenu.Size = new System.Drawing.Size(220, 561);
             this.panelMenu.TabIndex = 0;
             // 
             // btn_signout
@@ -76,16 +78,36 @@
             this.btn_signout.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_signout.Image = global::Project.Properties.Resources.icons8_sign_out_48__2_;
             this.btn_signout.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_signout.Location = new System.Drawing.Point(0, 440);
+            this.btn_signout.Location = new System.Drawing.Point(0, 500);
             this.btn_signout.Name = "btn_signout";
             this.btn_signout.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
             this.btn_signout.Size = new System.Drawing.Size(220, 60);
-            this.btn_signout.TabIndex = 7;
+            this.btn_signout.TabIndex = 8;
             this.btn_signout.Text = " Sign Out";
             this.btn_signout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_signout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_signout.UseVisualStyleBackColor = true;
             this.btn_signout.Click += new System.EventHandler(this.btn_signout_Click);
+            // 
+            // btn_log
+            // 
+            this.btn_log.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_log.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btn_log.FlatAppearance.BorderSize = 0;
+            this.btn_log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_log.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btn_log.Image = global::Project.Properties.Resources.icons8_transaction_48;
+            this.btn_log.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_log.Location = new System.Drawing.Point(0, 440);
+            this.btn_log.Name = "btn_log";
+            this.btn_log.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.btn_log.Size = new System.Drawing.Size(220, 60);
+            this.btn_log.TabIndex = 7;
+            this.btn_log.Text = " Logs";
+            this.btn_log.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_log.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_log.UseVisualStyleBackColor = true;
+            this.btn_log.Click += new System.EventHandler(this.btn_log_Click);
             // 
             // btn_changepw
             // 
@@ -246,7 +268,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(220, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(581, 80);
+            this.panelTitle.Size = new System.Drawing.Size(718, 80);
             this.panelTitle.TabIndex = 1;
             // 
             // label2
@@ -254,7 +276,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(544, 12);
+            this.label2.Location = new System.Drawing.Point(681, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 28);
             this.label2.TabIndex = 3;
@@ -265,7 +287,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(71, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(140, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(88, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -278,7 +300,7 @@
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Title.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title.Location = new System.Drawing.Point(156, 25);
+            this.lbl_Title.Location = new System.Drawing.Point(225, 25);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(288, 31);
             this.lbl_Title.TabIndex = 0;
@@ -288,7 +310,7 @@
             // 
             this.panelDeskTop.Location = new System.Drawing.Point(220, 80);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(581, 453);
+            this.panelDeskTop.Size = new System.Drawing.Size(724, 480);
             this.panelDeskTop.TabIndex = 2;
             this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
             // 
@@ -296,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 533);
+            this.ClientSize = new System.Drawing.Size(938, 561);
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
@@ -323,7 +345,7 @@
         private Button btn_withdraw;
         private Button btn_deposit;
         private Panel panelLogo;
-        private Button btn_signout;
+        private Button btn_log;
         private Button btn_changepw;
         private Panel panelTitle;
         private Label lbl_Title;
@@ -331,5 +353,6 @@
         private Panel panelDeskTop;
         private Button btn_home;
         private Label label2;
+        private Button btn_signout;
     }
 }

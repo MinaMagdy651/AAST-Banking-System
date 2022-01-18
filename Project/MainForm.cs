@@ -118,13 +118,7 @@ namespace Project
             OpenFormChild(new ChangePass(accNum), sender);
         }
 
-        private void btn_signout_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            lgnfrm newlgn = new lgnfrm();
-            newlgn.Closed += (s, args) => this.Close();
-            newlgn.Show();
-        }
+
 
         private void panelDeskTop_Paint(object sender, PaintEventArgs e)
         {
@@ -147,6 +141,20 @@ namespace Project
         {
             Close();
         }
+
+        private void btn_log_Click(object sender, EventArgs e)
+        {
+            OpenFormChild(new Logs(accNum), sender);
+        }
+
+        private void btn_signout_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            lgnfrm newlgn = new lgnfrm();
+            newlgn.Closed += (s, args) => this.Close();
+            newlgn.Show();
+        }
+
     }
        
 }

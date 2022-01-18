@@ -1,0 +1,11 @@
+C:\new laptop\2\Project.exe
+C:\new laptop\2\Project.dll
+C:\new laptop\2\Project.deps.json
+C:\new laptop\2\Project.runtimeconfig.json
+C:\new laptop\2\Project.pdb
+C:\new laptop\2\System.Data.SqlClient.dll
+C:\new laptop\2\runtimes\win-arm64\native\sni.dll
+C:\new laptop\2\runtimes\win-x64\native\sni.dll
+C:\new laptop\2\runtimes\win-x86\native\sni.dll
+C:\new laptop\2\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\new laptop\2\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

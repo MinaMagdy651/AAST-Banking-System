@@ -26,7 +26,7 @@ namespace Project
         {
             string path = System.Environment.CurrentDirectory;
             string path2 = path.Substring(0, path.LastIndexOf("bin")) + "DataBase" + "\\DB.mdf";
-
+            
 
             connect = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=" + path2 + ";Integrated Security=True");
             try
@@ -115,6 +115,12 @@ namespace Project
                 SqlCommand command = new SqlCommand(query, connect);
                 command.ExecuteNonQuery();
                 command.Dispose();
+
+
+                string query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + Account_Number + "', '" + "Withdraw" + "', '" + val + "', '" + DateTime.Now + "')";
+                SqlCommand command2 = new SqlCommand(query2, connect);
+                command2.ExecuteNonQuery();
+                command2.Dispose();
                 return true;
             }
             return false;
@@ -129,6 +135,11 @@ namespace Project
                 SqlCommand command = new SqlCommand(query, connect);
                 command.ExecuteNonQuery();
                 command.Dispose();
+
+                string query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + Account_Number + "', '" + "Deposit" + "', '" + val + "', '" + DateTime.Now + "')";
+                SqlCommand command2 = new SqlCommand(query2, connect);
+                command2.ExecuteNonQuery();
+                command2.Dispose();
                 return true;
             }
             return false;
@@ -165,6 +176,13 @@ namespace Project
 
                 command.ExecuteNonQuery();
                 command.Dispose();
+
+
+                string query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + Account_Number + "', '" + "Loaned" + "', '" + amount + "', '" + DateTime.Now + "')";
+                SqlCommand command2 = new SqlCommand(query2, connect);
+                command2.ExecuteNonQuery();
+                command2.Dispose();
+
                 return true;
             }
             return false;
@@ -183,10 +201,21 @@ namespace Project
                 if (Withdraw(val))
                 {
                     user2.Deposit(val);
+                    string query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + Account_Number + "', '" + "Transfered To: " + user2.Name + "', '" + val + "', '" + DateTime.Now + "')";
+                    SqlCommand command2 = new SqlCommand(query2, connect);
+                    command2.ExecuteNonQuery();
+                    command2.Dispose();
+
+
+                    query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + user2.Account_Number + "', '" + "Transfered From: " + user2.Name + "', '" + val + "', '" + DateTime.Now + "')";
+                    command2 = new SqlCommand(query2, connect);
+                    command2.ExecuteNonQuery();
+                    command2.Dispose();
                     return true;
                 }
             }
             dataReader.Close();
+
             return false;
         }
         public bool paydebt(double val)

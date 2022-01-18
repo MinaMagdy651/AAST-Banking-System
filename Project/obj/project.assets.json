@@ -459,11 +459,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Project with GUI\\Final Project\\Project\\Project.csproj",
+      "projectUniqueName": "C:\\Project 2.0\\Final Project\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "C:\\Project with GUI\\Final Project\\Project\\Project.csproj",
+      "projectPath": "C:\\Project 2.0\\Final Project\\Project\\Project.csproj",
       "packagesPath": "C:\\Users\\minam\\.nuget\\packages\\",
-      "outputPath": "C:\\Project with GUI\\Final Project\\Project\\obj\\",
+      "outputPath": "C:\\Project 2.0\\Final Project\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\minam\\AppData\\Roaming\\NuGet\\NuGet.Config",

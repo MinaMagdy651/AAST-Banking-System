@@ -1,0 +1,3 @@
+C:\new laptop\OOP project\Project.pdb
+C:\new laptop\OOP project\sni.dll
+C:\new laptop\OOP project\Project.exe

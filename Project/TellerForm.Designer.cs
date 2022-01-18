@@ -43,6 +43,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_viewlog = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +83,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(803, 87);
             this.panel1.TabIndex = 9;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label1
             // 
@@ -94,7 +94,6 @@
             this.label1.Size = new System.Drawing.Size(168, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Account Number: ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // AccNum
             // 
@@ -105,7 +104,6 @@
             this.AccNum.Name = "AccNum";
             this.AccNum.Size = new System.Drawing.Size(277, 20);
             this.AccNum.TabIndex = 1;
-            this.AccNum.TextChanged += new System.EventHandler(this.AccNum_TextChanged);
             // 
             // button1
             // 
@@ -144,7 +142,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 6;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button5
             // 
@@ -176,6 +173,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(237)))), ((int)(((byte)(235)))));
+            this.panel2.Controls.Add(this.btn_viewlog);
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button2);
@@ -193,7 +191,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 380);
             this.panel2.TabIndex = 10;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -202,7 +199,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(460, 3);
             this.panel3.TabIndex = 12;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // label4
             // 
@@ -214,7 +210,6 @@
             this.label4.Size = new System.Drawing.Size(260, 31);
             this.label4.TabIndex = 11;
             this.label4.Text = "AAST Banking Services";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // pictureBox1
             // 
@@ -225,7 +220,20 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // btn_viewlog
+            // 
+            this.btn_viewlog.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_viewlog.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_viewlog.FlatAppearance.BorderSize = 0;
+            this.btn_viewlog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_viewlog.Location = new System.Drawing.Point(307, 315);
+            this.btn_viewlog.Name = "btn_viewlog";
+            this.btn_viewlog.Size = new System.Drawing.Size(139, 45);
+            this.btn_viewlog.TabIndex = 13;
+            this.btn_viewlog.Text = "View Log";
+            this.btn_viewlog.UseVisualStyleBackColor = false;
+            this.btn_viewlog.Click += new System.EventHandler(this.btn_viewlog_Click);
             // 
             // TellerForm
             // 
@@ -262,5 +270,6 @@
         private Label label4;
         private PictureBox pictureBox1;
         private Panel panel3;
+        private Button btn_viewlog;
     }
 }
