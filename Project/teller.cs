@@ -81,6 +81,10 @@ namespace Project
             int new_accNumber = 0;
             if(DataReader.Read())
                 new_accNumber =  Int32.Parse("" + DataReader.GetValue(0)) + 1;
+            else
+            {
+                new_accNumber = 1;
+            }
 
             string password = passwordGen();
             DataReader.Close();
