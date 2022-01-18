@@ -135,11 +135,12 @@ namespace Project
                 SqlCommand command = new SqlCommand(query, connect);
                 command.ExecuteNonQuery();
                 command.Dispose();
-
+                //MessageBox.Show("1");
                 string query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + Account_Number + "', '" + "Deposit" + "', '" + val + "', '" + DateTime.Now + "')";
                 SqlCommand command2 = new SqlCommand(query2, connect);
                 command2.ExecuteNonQuery();
                 command2.Dispose();
+               // MessageBox.Show("2");
                 return true;
             }
             return false;
