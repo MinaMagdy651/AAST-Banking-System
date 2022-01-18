@@ -66,7 +66,7 @@
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(220, 561);
+            this.panelMenu.Size = new System.Drawing.Size(220, 571);
             this.panelMenu.TabIndex = 0;
             // 
             // btn_signout
@@ -268,7 +268,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(220, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(718, 80);
+            this.panelTitle.Size = new System.Drawing.Size(670, 80);
             this.panelTitle.TabIndex = 1;
             // 
             // label2
@@ -276,7 +276,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(681, 25);
+            this.label2.Location = new System.Drawing.Point(607, 25);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(25, 28);
             this.label2.TabIndex = 3;
@@ -287,7 +287,7 @@
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::Project.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(140, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(116, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(88, 59);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -300,7 +300,7 @@
             this.lbl_Title.AutoSize = true;
             this.lbl_Title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbl_Title.ForeColor = System.Drawing.Color.White;
-            this.lbl_Title.Location = new System.Drawing.Point(225, 25);
+            this.lbl_Title.Location = new System.Drawing.Point(201, 25);
             this.lbl_Title.Name = "lbl_Title";
             this.lbl_Title.Size = new System.Drawing.Size(288, 31);
             this.lbl_Title.TabIndex = 0;
@@ -310,7 +310,7 @@
             // 
             this.panelDeskTop.Location = new System.Drawing.Point(220, 80);
             this.panelDeskTop.Name = "panelDeskTop";
-            this.panelDeskTop.Size = new System.Drawing.Size(724, 480);
+            this.panelDeskTop.Size = new System.Drawing.Size(671, 491);
             this.panelDeskTop.TabIndex = 2;
             this.panelDeskTop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDeskTop_Paint);
             // 
@@ -318,7 +318,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(938, 561);
+            this.ClientSize = new System.Drawing.Size(890, 571);
             this.Controls.Add(this.panelDeskTop);
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.panelMenu);
