@@ -208,14 +208,14 @@ namespace Project
                     command2.Dispose();
 
 
-                    query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + user2.Account_Number + "', '" + "Transfered From: " + user2.Name + "', '" + val + "', '" + DateTime.Now + "')";
+                    query2 = "INSERT INTO TransactionRecords (ID, Operarion, Amount, Date) VALUES('" + user2.Account_Number + "', '" + "Transfered From: " + Name + "', '" + val + "', '" + DateTime.Now + "')";
                     command2 = new SqlCommand(query2, connect);
                     command2.ExecuteNonQuery();
                     command2.Dispose();
                     return true;
                 }
             }
-            dataReader.Close();
+            dataReader.Close(); 
 
             return false;
         }
