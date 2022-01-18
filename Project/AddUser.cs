@@ -140,5 +140,17 @@ namespace Project
             tellerform.Closed += (s, args) => this.Close();
             tellerform.Show();
         }
+
+        private void txt_name_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txt_Phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

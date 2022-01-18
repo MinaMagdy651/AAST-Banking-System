@@ -70,6 +70,7 @@
             this.txt_name.PlaceholderText = "Name...";
             this.txt_name.Size = new System.Drawing.Size(114, 27);
             this.txt_name.TabIndex = 1;
+            this.txt_name.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_name_KeyPress);
             // 
             // txt_email
             // 
@@ -103,6 +104,7 @@
             this.txt_Phone.PlaceholderText = "Phone..";
             this.txt_Phone.Size = new System.Drawing.Size(114, 27);
             this.txt_Phone.TabIndex = 7;
+            this.txt_Phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phone_KeyPress);
             // 
             // txt_balance
             // 
@@ -114,6 +116,7 @@
             this.txt_balance.PlaceholderText = "Balance..";
             this.txt_balance.Size = new System.Drawing.Size(114, 27);
             this.txt_balance.TabIndex = 9;
+            this.txt_balance.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_Phone_KeyPress);
             // 
             // chck_male
             // 
