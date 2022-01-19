@@ -225,7 +225,7 @@ namespace Project
                 return false;
             if(val > 0 && Balance >= val && debt >= val)
             {
-                Balance -= val;
+                balance -= val;
                 debt -= val;
                 string query = "UPDATE tbl_accounts_data SET  Balance = " + Balance + " , Debt = " + Debt + " WHERE AccountNumber = " + Account_Number;
                 SqlCommand command = new SqlCommand(query, connect);
@@ -235,8 +235,8 @@ namespace Project
             }
             else if(val > 0 && Balance >= val && val > debt)
             {
+                Balance -= val;
                 double exceed = val - debt;
-                Balance -= debt;
                 Balance += exceed;
                 debt = 0;
                 string query = "UPDATE tbl_accounts_data SET  Balance = " + Balance + " , Debt = " + 0 + " WHERE AccountNumber = " + Account_Number;
