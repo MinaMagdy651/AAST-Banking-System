@@ -73,6 +73,7 @@
             this.usernametxt.Name = "usernametxt";
             this.usernametxt.Size = new System.Drawing.Size(168, 27);
             this.usernametxt.TabIndex = 2;
+            this.usernametxt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.usernametxt_KeyPress);
             // 
             // passwordtxt
             // 
@@ -97,7 +98,6 @@
             this.btn_lgin.Text = "Login";
             this.btn_lgin.UseVisualStyleBackColor = false;
             this.btn_lgin.Click += new System.EventHandler(this.btn_lgin_Click);
-            this.btn_lgin.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.btn_lgin_KeyPress);
             // 
             // btn_exit
             // 

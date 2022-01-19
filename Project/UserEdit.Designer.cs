@@ -146,6 +146,7 @@
             this.phonenumber.PlaceholderText = "Phone..";
             this.phonenumber.Size = new System.Drawing.Size(229, 27);
             this.phonenumber.TabIndex = 11;
+            this.phonenumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phonenumber_KeyPress);
             // 
             // email
             // 

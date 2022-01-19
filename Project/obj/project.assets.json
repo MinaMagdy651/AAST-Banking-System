@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ali Zakaria\\.nuget\\packages\\": {}
+    "C:\\Users\\minam\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Projects\\BankSystem8\\Project\\Project.csproj",
+      "projectUniqueName": "C:\\Final Project\\Project\\Project.csproj",
       "projectName": "Project",
-      "projectPath": "E:\\Projects\\BankSystem8\\Project\\Project.csproj",
-      "packagesPath": "C:\\Users\\Ali Zakaria\\.nuget\\packages\\",
-      "outputPath": "E:\\Projects\\BankSystem8\\Project\\obj\\",
+      "projectPath": "C:\\Final Project\\Project\\Project.csproj",
+      "packagesPath": "C:\\Users\\minam\\.nuget\\packages\\",
+      "outputPath": "C:\\Final Project\\Project\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ali Zakaria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\minam\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

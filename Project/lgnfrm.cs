@@ -28,7 +28,7 @@ namespace Project
         private void btn_lgin_Click(object sender, EventArgs e)
         {
 
-            if(!string.IsNullOrEmpty(usernametxt.Text) && usernametxt.Text.All(char.IsNumber) && !string.IsNullOrEmpty(passwordtxt.Text))
+            try
             {
                 Person p = new Person(Convert.ToUInt32(usernametxt.Text), passwordtxt.Text);
                 passwordtxt.Clear();
@@ -51,7 +51,7 @@ namespace Project
                     }
                 }
             }
-            else
+            catch (Exception)
             {
                 MessageBox.Show("Please enter valid data");
                 usernametxt.Clear();
@@ -59,17 +59,16 @@ namespace Project
             
         }
 
-      
-       
-
-        private void btn_lgin_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void usernametxt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
