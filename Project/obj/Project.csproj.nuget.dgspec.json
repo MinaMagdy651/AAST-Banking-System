@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "K:\\AAST\\Terme 5\\Advanced Programming\\blz\\Project\\Project\\Project.csproj": {}
+    "E:\\Projects\\BankSystem8\\Project\\Project.csproj": {}
   },
   "projects": {
-    "K:\\AAST\\Terme 5\\Advanced Programming\\blz\\Project\\Project\\Project.csproj": {
+    "E:\\Projects\\BankSystem8\\Project\\Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "K:\\AAST\\Terme 5\\Advanced Programming\\blz\\Project\\Project\\Project.csproj",
+        "projectUniqueName": "E:\\Projects\\BankSystem8\\Project\\Project.csproj",
         "projectName": "Project",
-        "projectPath": "K:\\AAST\\Terme 5\\Advanced Programming\\blz\\Project\\Project\\Project.csproj",
-        "packagesPath": "C:\\Users\\moust\\.nuget\\packages\\",
-        "outputPath": "K:\\AAST\\Terme 5\\Advanced Programming\\blz\\Project\\Project\\obj\\",
+        "projectPath": "E:\\Projects\\BankSystem8\\Project\\Project.csproj",
+        "packagesPath": "C:\\Users\\Ali Zakaria\\.nuget\\packages\\",
+        "outputPath": "E:\\Projects\\BankSystem8\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\moust\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Ali Zakaria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
