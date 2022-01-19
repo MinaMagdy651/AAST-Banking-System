@@ -41,19 +41,19 @@
             this.dataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGrid.ColumnHeadersHeight = 29;
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGrid.Location = new System.Drawing.Point(-4, -4);
+            this.dataGrid.Location = new System.Drawing.Point(-2, 1);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.ReadOnly = true;
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.RowTemplate.Height = 29;
-            this.dataGrid.Size = new System.Drawing.Size(578, 436);
+            this.dataGrid.Size = new System.Drawing.Size(759, 436);
             this.dataGrid.TabIndex = 0;
             // 
             // Logs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(568, 430);
+            this.ClientSize = new System.Drawing.Size(769, 449);
             this.Controls.Add(this.dataGrid);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Logs";

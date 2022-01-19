@@ -72,7 +72,6 @@ namespace Project
         }
         private void OpenFormChild(Form childForm, object btnSender)
         {
-            DisableButton();
             if (activeForm != null)
             {
                 activeForm.Close();
