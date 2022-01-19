@@ -120,7 +120,7 @@ namespace Project
             {
                 label2.Text = "The entered data is invalid..";
                 AccNum.Clear();
-                throw;
+               
             }
         }
 

@@ -33,7 +33,6 @@ namespace Project
             {
                 Console.WriteLine("Error while connection to SQL server");
             }
-
         }
         public Person(UInt32 number)
         {

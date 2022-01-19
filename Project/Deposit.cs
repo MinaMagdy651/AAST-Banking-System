@@ -45,6 +45,7 @@ namespace Project
             {
                 textDeposit.Clear();
                 lbl_depStat.Text = "Please enter a valid amount";
+             //   throw;
             }
         }
     }
