@@ -51,6 +51,9 @@ namespace Project
             }
         }
 
+        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }
