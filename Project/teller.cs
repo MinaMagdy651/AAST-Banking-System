@@ -59,15 +59,20 @@ namespace Project
             if (user1.Found && user1.AdminLvl != 1)
             {
                 string query = "DELETE FROM tbl_accounts_data WHERE AccountNumber = " + account_number;
-
                 SqlCommand command = new SqlCommand(query, connect2);
-                string query2 = "DELETE FROM Users WHERE AccountNumber = " + account_number;
                 command.ExecuteNonQuery();
                 command.Dispose();
+
+                string query2 = "DELETE FROM Users WHERE AccountNumber = " + account_number;
                 SqlCommand command2 = new SqlCommand(query2, connect2);
                 command2.ExecuteNonQuery();
                 command2.Dispose();
 
+
+                string query3 = "DELETE FROM TransactionRecords WHERE ID = " + account_number;
+                SqlCommand command3 = new SqlCommand(query3, connect2);
+                command3.ExecuteNonQuery();
+                command3.Dispose();
                 return true;
             }
             return false;
@@ -81,6 +86,10 @@ namespace Project
             int new_accNumber = 0;
             if(DataReader.Read())
                 new_accNumber =  Int32.Parse("" + DataReader.GetValue(0)) + 1;
+            else
+            {
+                new_accNumber = 1;
+            }
 
             string password = passwordGen();
             DataReader.Close();

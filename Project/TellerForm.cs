@@ -120,6 +120,7 @@ namespace Project
             {
                 label2.Text = "The entered data is invalid..";
                 AccNum.Clear();
+                throw;
             }
         }
 
@@ -136,8 +137,19 @@ namespace Project
             try
             {
                 UInt32 num = Convert.ToUInt32(AccNum.Text);
-                Logs log = new Logs(num);
-                log.Show();
+                
+                User user1 = new User(num);
+
+                if (user1.Found)
+                {
+                    Logs log = new Logs(num);
+                    log.Show();
+                }
+                else
+                {
+                    label2.Text = "Account Doesn't exist";
+                    AccNum.Clear();
+                }
             }
             catch
             {
