@@ -288,3 +288,41 @@ E:\Projects\BankSystem8\Project\obj\Debug\net6.0-windows\Project.dll
 E:\Projects\BankSystem8\Project\obj\Debug\net6.0-windows\ref\Project.dll
 E:\Projects\BankSystem8\Project\obj\Debug\net6.0-windows\Project.pdb
 E:\Projects\BankSystem8\Project\obj\Debug\net6.0-windows\Project.genruntimeconfig.cache
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\Project.exe
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\Project.deps.json
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\Project.runtimeconfig.json
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\Project.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\ref\Project.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\Project.pdb
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\System.Data.SqlClient.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\runtimes\win-arm64\native\sni.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\runtimes\win-x64\native\sni.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.csproj.AssemblyReference.cache
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.AddUser.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.ChangePass.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Debt.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Deposit.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.HomeScreen.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.lgnfrm.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Loan.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Logs.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.MainForm.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Properties.Resources.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.TellerForm.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Transfer.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.UserData.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.UserEdit.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.Withdraw.resources
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.csproj.GenerateResource.cache
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.GeneratedMSBuildEditorConfig.editorconfig
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.AssemblyInfoInputs.cache
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.AssemblyInfo.cs
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.csproj.CoreCompileInputs.cache
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.csproj.CopyComplete
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\ref\Project.dll
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.pdb
+K:\AAST\Terme 5\Advanced Programming\blz\Project\Project\obj\Debug\net6.0-windows\Project.genruntimeconfig.cache
