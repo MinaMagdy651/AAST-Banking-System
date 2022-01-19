@@ -45,6 +45,7 @@ namespace Project
         {
             return ColorTranslator.FromHtml("#FFA500");
         }
+
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -57,8 +58,16 @@ namespace Project
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
                 }
+                else
+                {
+                    Color color = SelectThemeColor();
+                    currentButton = (Button)btnSender;
+                    currentButton.BackColor = color;
+                    currentButton.ForeColor = Color.White;
+                }
             }
         }
+
         private void DisableButton()
         {
             foreach (Control previousBtn in panelMenu.Controls)
@@ -70,6 +79,7 @@ namespace Project
                 }
             }
         }
+
         private void OpenFormChild(Form childForm, object btnSender)
         {
             DisableButton();
